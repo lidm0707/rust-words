@@ -1,0 +1,46 @@
+{
+    "sourceFile": "Cargo.toml",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1726246974742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1726246984635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n version = \"0.1.0\"\n edition = \"2021\"\n \n [dependencies]\n-gtk = \"0.13\"\n+gtk = \"0.18.1\"\n"
+                },
+                {
+                    "date": 1726247037489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n version = \"0.1.0\"\n edition = \"2021\"\n \n [dependencies]\n-gtk = \"0.18.1\"\n+gtk = \"0.18.0\"\n"
+                },
+                {
+                    "date": 1726247107790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,5 @@\n version = \"0.1.0\"\n edition = \"2021\"\n \n [dependencies]\n-gtk = \"0.18.0\"\n+gtk = \"0.18.1\"\n"
+                },
+                {
+                    "date": 1726247152575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,4 +4,5 @@\n edition = \"2021\"\n \n [dependencies]\n gtk = \"0.18.1\"\n+gtk = { git = \"https://github.com/gtk-rs/gtk3-rs.git\" }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726247166395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+[package]\n+name = \"rust-words\"\n+version = \"0.1.0\"\n+edition = \"2021\"\n+\n+[dependencies]\n+gtk = \"0.18.1\"\n"
+                },
+                {
+                    "date": 1726248094267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,4 @@\n version = \"0.1.0\"\n edition = \"2021\"\n \n [dependencies]\n-gtk = \"0.18.1\"\n-[package]\n-name = \"rust-words\"\n-version = \"0.1.0\"\n-edition = \"2021\"\n-\n-[dependencies]\n-gtk = \"0.18.1\"\n-gtk = { git = \"https://github.com/gtk-rs/gtk3-rs.git\" }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726259650588,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,4 +3,5 @@\n version = \"0.1.0\"\n edition = \"2021\"\n \n [dependencies]\n+rand = \"0.8.5\"\n"
+                }
+            ],
+            "date": 1726246974742,
+            "name": "Commit-0",
+            "content": "[package]\nname = \"rust-words\"\nversion = \"0.1.0\"\nedition = \"2021\"\n\n[dependencies]\ngtk = \"0.13\"\n"
+        }
+    ]
+}

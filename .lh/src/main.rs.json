@@ -1,0 +1,1034 @@
+{
+    "sourceFile": "src/main.rs",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 254,
+            "patches": [
+                {
+                    "date": 1726244600936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1726244607569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n fn main() {\n \n-    \n+    let a = vec[]\n+\n     println!(\"Hello, world!\");\n }\n"
+                },
+                {
+                    "date": 1726244622448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n fn main() {\n \n-    let a = vec[]\n+    let a = vec:u8[];\n \n     println!(\"Hello, world!\");\n }\n"
+                },
+                {
+                    "date": 1726244641867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n fn main() {\n \n-    let a = vec:u8[];\n+    let a = Vec::new();\n \n     println!(\"Hello, world!\");\n }\n"
+                },
+                {
+                    "date": 1726244653245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n fn main() {\n \n-    let a = Vec::new();\n+    let a: Vec<_> = Vec::new();\n \n     println!(\"Hello, world!\");\n }\n"
+                },
+                {
+                    "date": 1726244658309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n fn main() {\n \n-    let a: Vec<_> = Vec::new();\n+    let a: Vec<_> = Vec::new(1,2,3,4);\n \n     println!(\"Hello, world!\");\n }\n"
+                },
+                {
+                    "date": 1726244688590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n fn main() {\n \n-    let a: Vec<_> = Vec::new(1,2,3,4);\n+    let a: Vec<_> = vec![1, 2, 3, 4];\n \n     println!(\"Hello, world!\");\n }\n"
+                },
+                {
+                    "date": 1726244697490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n fn main() {\n \n     let a: Vec<_> = vec![1, 2, 3, 4];\n \n-    println!(\"Hello, world!\");\n+    println!(\"Hello, world! {}\");\n }\n"
+                },
+                {
+                    "date": 1726244705636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n fn main() {\n \n     let a: Vec<_> = vec![1, 2, 3, 4];\n \n-    println!(\"Hello, world! {}\");\n+    println!(\"Hello, world! {}\",a.0);\n }\n"
+                },
+                {
+                    "date": 1726244718825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n fn main() {\n \n-    let a: Vec<_> = vec![1, 2, 3, 4];\n+    let a: Vec<U8> = vec![1, 2, 3, 4];\n \n-    println!(\"Hello, world! {}\",a.0);\n+    println!(\"Hello, world! {}\",a[1]);\n }\n"
+                },
+                {
+                    "date": 1726244738940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n fn main() {\n \n-    let a: Vec<U8> = vec![1, 2, 3, 4];\n+    let a: Vec<u8> = vec![1, 2, 3, 4];\n+    a.push(value)\n \n     println!(\"Hello, world! {}\",a[1]);\n }\n"
+                },
+                {
+                    "date": 1726244747040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n fn main() {\n \n     let a: Vec<u8> = vec![1, 2, 3, 4];\n-    a.push(value)\n+    a.push(5);\n \n     println!(\"Hello, world! {}\",a[1]);\n }\n"
+                },
+                {
+                    "date": 1726244757267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,10 @@\n fn main() {\n \n     let a: Vec<u8> = vec![1, 2, 3, 4];\n     a.push(5);\n+    {\n+        a.pop();\n+    }\n \n     println!(\"Hello, world! {}\",a[1]);\n }\n"
+                },
+                {
+                    "date": 1726244766305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n fn main() {\n \n-    let a: Vec<u8> = vec![1, 2, 3, 4];\n+    let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     a.push(5);\n     {\n         a.pop();\n     }\n"
+                },
+                {
+                    "date": 1726244775959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,6 @@\n     {\n         a.pop();\n     }\n \n-    println!(\"Hello, world! {}\",a[1]);\n+    println!(\"{}\",a[1]);\n }\n"
+                },
+                {
+                    "date": 1726244781843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,12 @@\n fn main() {\n \n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     a.push(5);\n+    println!(\"{}\",a[1]);\n     {\n         a.pop();\n+        println!(\"{}\",a[1]);\n     }\n \n     println!(\"{}\",a[1]);\n }\n"
+                },
+                {
+                    "date": 1726244797971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n fn main() {\n \n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     a.push(5);\n-    println!(\"{}\",a[1]);\n+    println!(\"{}\",a[4]);\n     {\n         a.pop();\n         println!(\"{}\",a[1]);\n     }\n"
+                },
+                {
+                    "date": 1726244816463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,15 @@\n fn main() {\n \n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     a.push(5);\n+    loop{\n+        \n+    }\n     println!(\"{}\",a[4]);\n     {\n         a.pop();\n-        println!(\"{}\",a[1]);\n+        println!(\"{}\",a[4]);\n     }\n \n-    println!(\"{}\",a[1]);\n+    println!(\"{}\",a[4]);\n }\n"
+                },
+                {
+                    "date": 1726244822398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     a.push(5);\n     loop{\n-        \n+        if\n     }\n     println!(\"{}\",a[4]);\n     {\n         a.pop();\n"
+                },
+                {
+                    "date": 1726244829073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     a.push(5);\n     loop{\n-        if\n+        if a.le\n     }\n     println!(\"{}\",a[4]);\n     {\n         a.pop();\n"
+                },
+                {
+                    "date": 1726244835453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     a.push(5);\n     loop{\n-        if a.le\n+        if a.len() \n     }\n     println!(\"{}\",a[4]);\n     {\n         a.pop();\n"
+                },
+                {
+                    "date": 1726244847690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     a.push(5);\n     loop{\n-        if a.len() \n+        if i:u8 < a.len()\n     }\n     println!(\"{}\",a[4]);\n     {\n         a.pop();\n"
+                },
+                {
+                    "date": 1726244856076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     a.push(5);\n     loop{\n+        \n         if i:u8 < a.len()\n     }\n     println!(\"{}\",a[4]);\n     {\n"
+                },
+                {
+                    "date": 1726244861691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,11 @@\n \n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     a.push(5);\n     loop{\n-        \n-        if i:u8 < a.len()\n+        if i:u8 < a.len(){\n+            \n+        }\n     }\n     println!(\"{}\",a[4]);\n     {\n         a.pop();\n"
+                },
+                {
+                    "date": 1726244868087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     a.push(5);\n     loop{\n-        if i:u8 < a.len(){\n+        if i:u8 > a.len(){\n             \n         }\n     }\n     println!(\"{}\",a[4]);\n"
+                },
+                {
+                    "date": 1726244873363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     a.push(5);\n     loop{\n         if i:u8 > a.len(){\n-            \n+            i\n+            break;\n         }\n     }\n     println!(\"{}\",a[4]);\n     {\n"
+                },
+                {
+                    "date": 1726244881724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     a.push(5);\n     loop{\n         if i:u8 > a.len(){\n-            i\n+            i += 1;\n             break;\n         }\n     }\n     println!(\"{}\",a[4]);\n"
+                },
+                {
+                    "date": 1726244922932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,28 @@\n fn main() {\n-\n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     a.push(5);\n-    loop{\n-        if i:u8 > a.len(){\n-            i += 1;\n+\n+    let mut i: usize = 0;\n+    loop {\n+        if i >= a.len() {\n             break;\n         }\n+        i += 1;\n     }\n-    println!(\"{}\",a[4]);\n-    {\n-        a.pop();\n-        println!(\"{}\",a[4]);\n+\n+    // Print the 5th element (index 4)\n+    println!(\"{}\", a[4]); // Output: 5\n+\n+    // Pop the last element from the vector\n+    a.pop();\n+\n+    // Check if there are still enough elements to access index 4\n+    if a.len() > 4 {\n+        println!(\"{}\", a[4]);\n+    } else {\n+        println!(\"Element at index 4 does not exist after pop.\");\n     }\n \n-    println!(\"{}\",a[4]);\n+    // Final print to check the state of the vector\n+    println!(\"{:?}\", a); // Print the whole vector\n }\n"
+                },
+                {
+                    "date": 1726244959517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,6 +23,6 @@\n         println!(\"Element at index 4 does not exist after pop.\");\n     }\n \n     // Final print to check the state of the vector\n-    println!(\"{:?}\", a); // Print the whole vector\n+    println!(\"{:?}\", a); \n }\n"
+                },
+                {
+                    "date": 1726244968042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,15 +2,10 @@\n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     a.push(5);\n \n     let mut i: usize = 0;\n-    loop {\n-        if i >= a.len() {\n-            break;\n-        }\n-        i += 1;\n-    }\n \n+\n     // Print the 5th element (index 4)\n     println!(\"{}\", a[4]); // Output: 5\n \n     // Pop the last element from the vector\n@@ -22,7 +17,6 @@\n     } else {\n         println!(\"Element at index 4 does not exist after pop.\");\n     }\n \n-    // Final print to check the state of the vector\n     println!(\"{:?}\", a); \n }\n"
+                },
+                {
+                    "date": 1726244973679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,11 @@\n fn main() {\n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     a.push(5);\n \n-    let mut i: usize = 0;\n \n \n     // Print the 5th element (index 4)\n-    println!(\"{}\", a[4]); // Output: 5\n \n-    // Pop the last element from the vector\n-    a.pop();\n \n-    // Check if there are still enough elements to access index 4\n-    if a.len() > 4 {\n-        println!(\"{}\", a[4]);\n-    } else {\n-        println!(\"Element at index 4 does not exist after pop.\");\n-    }\n-\n     println!(\"{:?}\", a); \n }\n"
+                },
+                {
+                    "date": 1726244980561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,17 @@\n \n \n \n     // Print the 5th element (index 4)\n+    println!(\"{}\", a[4]); // Output: 5\n \n+    a.pop();\n \n+    // Check if there are still enough elements to access index 4\n+    if a.len() > 4 {\n+        println!(\"{}\", a[4]);\n+    } else {\n+        println!(\"Element at index 4 does not exist after pop.\");\n+    }\n+\n     println!(\"{:?}\", a); \n }\n"
+                },
+                {
+                    "date": 1726244990603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,18 +3,13 @@\n     a.push(5);\n \n \n \n-    // Print the 5th element (index 4)\n-    println!(\"{}\", a[4]); // Output: 5\n \n+    println!(\"{:?}\", a); \n+\n     a.pop();\n \n-    // Check if there are still enough elements to access index 4\n-    if a.len() > 4 {\n-        println!(\"{}\", a[4]);\n-    } else {\n-        println!(\"Element at index 4 does not exist after pop.\");\n-    }\n \n+\n     println!(\"{:?}\", a); \n }\n"
+                },
+                {
+                    "date": 1726244995858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \n \n \n     println!(\"{:?}\", a); \n-\n+    {\n     a.pop();\n \n \n \n"
+                },
+                {
+                    "date": 1726245004663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,16 @@\n fn main() {\n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n+    println!(\"{:?}\", a); \n     a.push(5);\n \n \n \n \n-    println!(\"{:?}\", a); \n+    \n     {\n     a.pop();\n+    }\n \n \n-\n     println!(\"{:?}\", a); \n }\n"
+                },
+                {
+                    "date": 1726245010088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,12 @@\n fn main() {\n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n-    println!(\"{:?}\", a); \n+    println!(\"{:?}\", a);\n     a.push(5);\n \n-\n-\n-\n-    \n     {\n-    a.pop();\n+        a.pop();\n+        println!(\"{:?}\", a);\n     }\n \n-\n-    println!(\"{:?}\", a); \n+    println!(\"{:?}\", a);\n }\n"
+                },
+                {
+                    "date": 1726245048226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n fn main() {\n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     println!(\"{:?}\", a);\n-    a.push(5);\n+    *a.push(5);\n \n     {\n         a.pop();\n         println!(\"{:?}\", a);\n"
+                },
+                {
+                    "date": 1726245053389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n fn main() {\n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     println!(\"{:?}\", a);\n-    *a.push(5);\n+    &a.push(5);\n \n     {\n         a.pop();\n         println!(\"{:?}\", a);\n"
+                },
+                {
+                    "date": 1726245058545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n fn main() {\n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     println!(\"{:?}\", a);\n-    &a.push(5);\n+    &\\a.push(5);\n \n     {\n         a.pop();\n         println!(\"{:?}\", a);\n"
+                },
+                {
+                    "date": 1726245094623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n fn main() {\n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     println!(\"{:?}\", a);\n-    &\\a.push(5);\n+    a.push(5);\n \n     {\n         a.pop();\n         println!(\"{:?}\", a);\n"
+                },
+                {
+                    "date": 1726245108624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n fn main() {\n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     println!(\"{:?}\", a);\n-    a.push(5);\n+    \n \n     {\n         a.pop();\n         println!(\"{:?}\", a);\n"
+                },
+                {
+                    "date": 1726245153815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,10 @@\n fn main() {\n     let mut a: Vec<u8> = vec![1, 2, 3, 4];\n     println!(\"{:?}\", a);\n-    \n-\n     {\n         a.pop();\n         println!(\"{:?}\", a);\n     }\n-\n+    a.push(5);\n     println!(\"{:?}\", a);\n }\n"
+                },
+                {
+                    "date": 1726245778138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,26 @@\n fn main() {\n-    let mut a: Vec<u8> = vec![1, 2, 3, 4];\n-    println!(\"{:?}\", a);\n-    {\n-        a.pop();\n-        println!(\"{:?}\", a);\n+    // สร้าง 2D vector ที่มี 3 แถว และ 4 คอลัมน์\n+    let mut matrix: Vec<Vec<i32>> = vec![\n+        vec![1, 2, 3, 4],\n+        vec![5, 6, 7, 8],\n+        vec![9, 10, 11, 12],\n+    ];\n+\n+    // แสดงผล 2D vector\n+    for row in &matrix {\n+        println!(\"{:?}\", row);\n     }\n-    a.push(5);\n-    println!(\"{:?}\", a);\n+\n+    // การเข้าถึงค่าใน 2D vector\n+    let row = 1;\n+    let col = 2;\n+    if let Some(value) = matrix.get(row).and_then(|r| r.get(col)) {\n+        println!(\"Value at ({}, {}): {}\", row, col, value);\n+    } else {\n+        println!(\"Index out of bounds\");\n+    }\n+\n+    // การเปลี่ยนแปลงค่าใน 2D vector\n+    matrix[1][2] = 42;\n+    println!(\"{:?}\", matrix);\n }\n"
+                },
+                {
+                    "date": 1726245788528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n \n     // การเข้าถึงค่าใน 2D vector\n     let row = 1;\n     let col = 2;\n-    if let Some(value) = matrix.get(row).and_then(|r| r.get(col)) {\n+    if let Some(value) = matrix.get(row).and_then(|r: &Vec<i32>| r.get(col)) {\n         println!(\"Value at ({}, {}): {}\", row, col, value);\n     } else {\n         println!(\"Index out of bounds\");\n     }\n"
+                },
+                {
+                    "date": 1726245828243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +1,22 @@\n fn main() {\n-    // สร้าง 2D vector ที่มี 3 แถว และ 4 คอลัมน์\n-    let mut matrix: Vec<Vec<i32>> = vec![\n+    let matrix: Vec<Vec<i32>> = vec![\n         vec![1, 2, 3, 4],\n         vec![5, 6, 7, 8],\n         vec![9, 10, 11, 12],\n     ];\n \n-    // แสดงผล 2D vector\n+    // หาความกว้างสูงสุดของแต่ละคอลัมน์\n+    let col_width = matrix.iter()\n+        .flat_map(|row| row.iter())\n+        .map(|&num| num.to_string().len())\n+        .max()\n+        .unwrap_or(0) + 1; // เพิ่มช่องว่างเพื่อให้ดูสวยงาม\n+\n+    // พิมพ์ 2D vector เป็นตาราง\n     for row in &matrix {\n-        println!(\"{:?}\", row);\n+        let row_str: Vec<String> = row.iter()\n+            .map(|&num| format!(\"{:width$}\", num, width = col_width))\n+            .collect();\n+        println!(\"{}\", row_str.join(\" \"));\n     }\n-\n-    // การเข้าถึงค่าใน 2D vector\n-    let row = 1;\n-    let col = 2;\n-    if let Some(value) = matrix.get(row).and_then(|r: &Vec<i32>| r.get(col)) {\n-        println!(\"Value at ({}, {}): {}\", row, col, value);\n-    } else {\n-        println!(\"Index out of bounds\");\n-    }\n-\n-    // การเปลี่ยนแปลงค่าใน 2D vector\n-    matrix[1][2] = 42;\n-    println!(\"{:?}\", matrix);\n }\n"
+                },
+                {
+                    "date": 1726245953597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n     let matrix: Vec<Vec<i32>> = vec![\n         vec![1, 2, 3, 4],\n         vec![5, 6, 7, 8],\n         vec![9, 10, 11, 12],\n+        vec![9, 10, 11, 12],\n     ];\n \n     // หาความกว้างสูงสุดของแต่ละคอลัมน์\n     let col_width = matrix.iter()\n"
+                },
+                {
+                    "date": 1726245958735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     let matrix: Vec<Vec<i32>> = vec![\n         vec![1, 2, 3, 4],\n         vec![5, 6, 7, 8],\n         vec![9, 10, 11, 12],\n-        vec![9, 10, 11, 12],\n+        vec![13, 10, 11, 12],\n     ];\n \n     // หาความกว้างสูงสุดของแต่ละคอลัมน์\n     let col_width = matrix.iter()\n"
+                },
+                {
+                    "date": 1726247005809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,23 @@\n+use gtk::prelude::*;\n+use gtk::{Application, ApplicationWindow};\n+\n fn main() {\n-    let matrix: Vec<Vec<i32>> = vec![\n-        vec![1, 2, 3, 4],\n-        vec![5, 6, 7, 8],\n-        vec![9, 10, 11, 12],\n-        vec![13, 10, 11, 12],\n-    ];\n+    let app = Application::builder()\n+        .application_id(\"org.example.HelloWorld\")\n+        .build();\n \n-    // หาความกว้างสูงสุดของแต่ละคอลัมน์\n-    let col_width = matrix.iter()\n-        .flat_map(|row| row.iter())\n-        .map(|&num| num.to_string().len())\n-        .max()\n-        .unwrap_or(0) + 1; // เพิ่มช่องว่างเพื่อให้ดูสวยงาม\n+    app.connect_activate(|app| {\n+        // We create the main window.\n+        let win = ApplicationWindow::builder()\n+            .application(app)\n+            .default_width(320)\n+            .default_height(200)\n+            .title(\"Hello, World!\")\n+            .build();\n \n-    // พิมพ์ 2D vector เป็นตาราง\n-    for row in &matrix {\n-        let row_str: Vec<String> = row.iter()\n-            .map(|&num| format!(\"{:width$}\", num, width = col_width))\n-            .collect();\n-        println!(\"{}\", row_str.join(\" \"));\n-    }\n-}\n+        // Don't forget to make all widgets visible.\n+        win.show_all();\n+    });\n+\n+    app.run();\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726247397758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,14 @@\n-use gtk::prelude::*;\n-use gtk::{Application, ApplicationWindow};\n+use tauri::api::dialog::MessageDialog;\n+use tauri::Manager;\n \n fn main() {\n-    let app = Application::builder()\n-        .application_id(\"org.example.HelloWorld\")\n-        .build();\n+    tauri::Builder::default()\n+        .invoke_handler(tauri::generate_handler![greet])\n+        .run(tauri::generate_context!())\n+        .expect(\"error while running tauri application\");\n+}\n \n-    app.connect_activate(|app| {\n-        // We create the main window.\n-        let win = ApplicationWindow::builder()\n-            .application(app)\n-            .default_width(320)\n-            .default_height(200)\n-            .title(\"Hello, World!\")\n-            .build();\n\\ No newline at end of file\n-\n-        // Don't forget to make all widgets visible.\n-        win.show_all();\n-    });\n-\n-    app.run();\n-}\n+#[tauri::command]\n+fn greet(name: &str) -> String {\n+    format!(\"Hello, {}!\", name)\n+}\n"
+                },
+                {
+                    "date": 1726248067527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,26 @@\n-use tauri::api::dialog::MessageDialog;\n-use tauri::Manager;\n-\n fn main() {\n-    tauri::Builder::default()\n-        .invoke_handler(tauri::generate_handler![greet])\n-        .run(tauri::generate_context!())\n-        .expect(\"error while running tauri application\");\n-}\n+    // สร้าง 2D vector ที่มี 3 แถว และ 4 คอลัมน์\n+    let mut matrix: Vec<Vec<i32>> = vec![\n+        vec![1, 2, 3, 4],\n+        vec![5, 6, 7, 8],\n+        vec![9, 10, 11, 12],\n+    ];\n \n-#[tauri::command]\n-fn greet(name: &str) -> String {\n-    format!(\"Hello, {}!\", name)\n+    // แสดงผล 2D vector\n+    for row in &matrix {\n+        println!(\"{:?}\", row);\n+    }\n+\n+    // การเข้าถึงค่าใน 2D vector\n+    let row = 1;\n+    let col = 2;\n+    if let Some(value) = matrix.get(row).and_then(|r| r.get(col)) {\n+        println!(\"Value at ({}, {}): {}\", row, col, value);\n+    } else {\n+        println!(\"Index out of bounds\");\n+    }\n+\n+    // การเปลี่ยนแปลงค่าใน 2D vector\n+    matrix[1][2] = 42;\n+    println!(\"{:?}\", matrix);\n }\n"
+                },
+                {
+                    "date": 1726248111622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,23 +4,6 @@\n         vec![1, 2, 3, 4],\n         vec![5, 6, 7, 8],\n         vec![9, 10, 11, 12],\n     ];\n-\n-    // แสดงผล 2D vector\n-    for row in &matrix {\n-        println!(\"{:?}\", row);\n-    }\n-\n-    // การเข้าถึงค่าใน 2D vector\n-    let row = 1;\n-    let col = 2;\n-    if let Some(value) = matrix.get(row).and_then(|r| r.get(col)) {\n-        println!(\"Value at ({}, {}): {}\", row, col, value);\n-    } else {\n-        println!(\"Index out of bounds\");\n-    }\n-\n-    // การเปลี่ยนแปลงค่าใน 2D vector\n-    matrix[1][2] = 42;\n     println!(\"{:?}\", matrix);\n }\n"
+                },
+                {
+                    "date": 1726248125218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,8 @@\n         vec![1, 2, 3, 4],\n         vec![5, 6, 7, 8],\n         vec![9, 10, 11, 12],\n     ];\n+\n+    matrix.p\n     println!(\"{:?}\", matrix);\n }\n"
+                },
+                {
+                    "date": 1726248134690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n         vec![5, 6, 7, 8],\n         vec![9, 10, 11, 12],\n     ];\n \n-    matrix.p\n+    matrix.push(vec![1, 2, 3, 4])\n     println!(\"{:?}\", matrix);\n }\n"
+                },
+                {
+                    "date": 1726248148380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,7 @@\n         vec![1, 2, 3, 4],\n         vec![5, 6, 7, 8],\n         vec![9, 10, 11, 12],\n     ];\n-\n-    matrix.push(vec![1, 2, 3, 4])\n+    matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n }\n"
+                },
+                {
+                    "date": 1726248415365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,6 @@\n         vec![9, 10, 11, 12],\n     ];\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n+    pr\n }\n"
+                },
+                {
+                    "date": 1726248421252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,6 @@\n         vec![9, 10, 11, 12],\n     ];\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n-    pr\n+    print\n }\n"
+                },
+                {
+                    "date": 1726248450003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,6 @@\n         vec![9, 10, 11, 12],\n     ];\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n-    print\n+    print!\n }\n"
+                },
+                {
+                    "date": 1726248457540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,6 @@\n         vec![9, 10, 11, 12],\n     ];\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n-    print!\n+    print!(\"{:?}\", matrix);\n }\n"
+                },
+                {
+                    "date": 1726248471122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,9 @@\n         vec![9, 10, 11, 12],\n     ];\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n+\n+\n+    \n     print!(\"{:?}\", matrix);\n }\n"
+                },
+                {
+                    "date": 1726248476470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n \n \n-    \n+    for i \n     print!(\"{:?}\", matrix);\n }\n"
+                },
+                {
+                    "date": 1726248489423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n \n \n-    for i \n+    for i:u8 in \n     print!(\"{:?}\", matrix);\n }\n"
+                },
+                {
+                    "date": 1726248495374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n \n \n-    for i:u8 in \n+    for i:usize in \n     print!(\"{:?}\", matrix);\n }\n"
+                },
+                {
+                    "date": 1726248501165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,9 @@\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n \n \n-    for i:usize in \n+    for i:usize in matrix {\n+        \n+    }\n     print!(\"{:?}\", matrix);\n }\n"
+                },
+                {
+                    "date": 1726248513149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n \n \n-    for i:usize in matrix {\n-        \n-    }\n+    for i:usize of matrix {\n+\n+    };\n     print!(\"{:?}\", matrix);\n }\n"
+                },
+                {
+                    "date": 1726248536438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n \n \n-    for i:usize of matrix {\n-\n-    };\n+    for row in &matrix {\n+        println!(\"{:?}\", row); // พิมพ์แต่ละแถว\n+    }\n     print!(\"{:?}\", matrix);\n }\n"
+                },
+                {
+                    "date": 1726248548156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,6 +11,5 @@\n \n     for row in &matrix {\n         println!(\"{:?}\", row); // พิมพ์แต่ละแถว\n     }\n-    print!(\"{:?}\", matrix);\n }\n"
+                },
+                {
+                    "date": 1726248560635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n \n \n-    for row in &matrix {\n+    for row:& in &matrix {\n         println!(\"{:?}\", row); // พิมพ์แต่ละแถว\n     }\n }\n"
+                },
+                {
+                    "date": 1726248567140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n \n \n-    for row:& in &matrix {\n+    for row:&Vec< in &matrix {\n         println!(\"{:?}\", row); // พิมพ์แต่ละแถว\n     }\n }\n"
+                },
+                {
+                    "date": 1726248584012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n \n \n-    for row:&Vec< in &matrix {\n+    for row &Vec<i32> in &matrix {\n         println!(\"{:?}\", row); // พิมพ์แต่ละแถว\n     }\n }\n"
+                },
+                {
+                    "date": 1726248589301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n \n \n-    for row &Vec<i32> in &matrix {\n+    for row  in &matrix {\n         println!(\"{:?}\", row); // พิมพ์แต่ละแถว\n     }\n }\n"
+                },
+                {
+                    "date": 1726248611431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n \n \n-    for row  in &matrix {\n+    for row: Vec<i32>  in &matrix {\n         println!(\"{:?}\", row); // พิมพ์แต่ละแถว\n     }\n }\n"
+                },
+                {
+                    "date": 1726248618110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n \n \n-    for row: Vec<i32>  in &matrix {\n+    for row in &matrix {\n         println!(\"{:?}\", row); // พิมพ์แต่ละแถว\n     }\n }\n"
+                },
+                {
+                    "date": 1726248629714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n \n \n-    for row in &matrix {\n+    for row in *matrix {\n         println!(\"{:?}\", row); // พิมพ์แต่ละแถว\n     }\n }\n"
+                },
+                {
+                    "date": 1726248643664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n \n \n-    for row in *matrix {\n+    for row in matrix {\n         println!(\"{:?}\", row); // พิมพ์แต่ละแถว\n     }\n }\n"
+                },
+                {
+                    "date": 1726248660434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n     matrix.push(vec![1, 2, 3, 4]);\n     println!(\"{:?}\", matrix);\n \n \n-    for row in matrix {\n-        println!(\"{:?}\", row); // พิมพ์แต่ละแถว\n+    for row in &matrix {\n+        println!(\"{:?}\", row); \n     }\n }\n"
+                },
+                {
+                    "date": 1726248680654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,10 @@\n         vec![1, 2, 3, 4],\n         vec![5, 6, 7, 8],\n         vec![9, 10, 11, 12],\n     ];\n-    matrix.push(vec![1, 2, 3, 4]);\n-    println!(\"{:?}\", matrix);\n \n+    \n \n     for row in &matrix {\n         println!(\"{:?}\", row); \n     }\n"
+                },
+                {
+                    "date": 1726248688683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n         vec![5, 6, 7, 8],\n         vec![9, 10, 11, 12],\n     ];\n \n-    \n+    vec\n \n     for row in &matrix {\n         println!(\"{:?}\", row); \n     }\n"
+                },
+                {
+                    "date": 1726248695965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n         vec![5, 6, 7, 8],\n         vec![9, 10, 11, 12],\n     ];\n \n-    vec\n+    matrix[1]\n \n     for row in &matrix {\n         println!(\"{:?}\", row); \n     }\n"
+                },
+                {
+                    "date": 1726248701186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n         vec![5, 6, 7, 8],\n         vec![9, 10, 11, 12],\n     ];\n \n-    matrix[1]\n+    matrix[1][3] = 0\n \n     for row in &matrix {\n         println!(\"{:?}\", row); \n     }\n"
+                },
+                {
+                    "date": 1726248730204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,12 @@\n         vec![5, 6, 7, 8],\n         vec![9, 10, 11, 12],\n     ];\n \n-    matrix[1][3] = 0\n+    matrix[1][3] = 0;\n \n     for row in &matrix {\n         println!(\"{:?}\", row); \n     }\n+\n+    matrix[1][3] = 0;\n }\n"
+                },
+                {
+                    "date": 1726249865151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n fn main() {\n+\n+    \n     // สร้าง 2D vector ที่มี 3 แถว และ 4 คอลัมน์\n     let mut matrix: Vec<Vec<i32>> = vec![\n         vec![1, 2, 3, 4],\n         vec![5, 6, 7, 8],\n@@ -10,7 +12,6 @@\n \n     for row in &matrix {\n         println!(\"{:?}\", row); \n     }\n-\n-    matrix[1][3] = 0;\n+    \n }\n"
+                },
+                {
+                    "date": 1726249878413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n fn main() {\n \n-    \n+    let chractor : char = \"💩\"\n     // สร้าง 2D vector ที่มี 3 แถว และ 4 คอลัมน์\n     let mut matrix: Vec<Vec<i32>> = vec![\n         vec![1, 2, 3, 4],\n         vec![5, 6, 7, 8],\n"
+                },
+                {
+                    "date": 1726249888014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n fn main() {\n \n-    let chractor : char = \"💩\"\n+    let chractor : char = '💩';\n     // สร้าง 2D vector ที่มี 3 แถว และ 4 คอลัมน์\n     let mut matrix: Vec<Vec<i32>> = vec![\n         vec![1, 2, 3, 4],\n         vec![5, 6, 7, 8],\n"
+                },
+                {
+                    "date": 1726249898030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n fn main() {\n \n     let chractor : char = '💩';\n-    // สร้าง 2D vector ที่มี 3 แถว และ 4 คอลัมน์\n     let mut matrix: Vec<Vec<i32>> = vec![\n         vec![1, 2, 3, 4],\n         vec![5, 6, 7, 8],\n         vec![9, 10, 11, 12],\n"
+                },
+                {
+                    "date": 1726249904210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,13 @@\n fn main() {\n \n     let chractor : char = '💩';\n+\n+    enum  {\n+        \n+    }\n+\n+\n     let mut matrix: Vec<Vec<i32>> = vec![\n         vec![1, 2, 3, 4],\n         vec![5, 6, 7, 8],\n         vec![9, 10, 11, 12],\n"
+                },
+                {
+                    "date": 1726249918566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n fn main() {\n \n     let chractor : char = '💩';\n \n-    enum  {\n+    enum place {\n         \n     }\n \n \n"
+                },
+                {
+                    "date": 1726249924465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n     let chractor : char = '💩';\n \n     enum place {\n-        \n+        space:,\n     }\n \n \n     let mut matrix: Vec<Vec<i32>> = vec![\n"
+                },
+                {
+                    "date": 1726249931132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n     let chractor : char = '💩';\n \n     enum place {\n-        space:,\n+        space:u8,\n     }\n \n \n     let mut matrix: Vec<Vec<i32>> = vec![\n"
+                },
+                {
+                    "date": 1726249942537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n     let chractor : char = '💩';\n \n     enum place {\n-        space:u8,\n+        space = u8,\n     }\n \n \n     let mut matrix: Vec<Vec<i32>> = vec![\n"
+                },
+                {
+                    "date": 1726249952934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n \n     let chractor : char = '💩';\n \n     enum place {\n-        space = u8,\n-    }\n+        let space = u8,\n+    };\n \n \n     let mut matrix: Vec<Vec<i32>> = vec![\n         vec![1, 2, 3, 4],\n"
+                },
+                {
+                    "date": 1726249982063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n     let chractor : char = '💩';\n \n     enum place {\n-        let space = u8,\n+        space = u8,\n     };\n \n \n     let mut matrix: Vec<Vec<i32>> = vec![\n"
+                },
+                {
+                    "date": 1726249990304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n \n     let chractor : char = '💩';\n \n     enum place {\n-        space = u8,\n+        space(u8),\n+        \n     };\n \n \n     let mut matrix: Vec<Vec<i32>> = vec![\n"
+                },
+                {
+                    "date": 1726250000903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n fn main() {\n \n-    let chractor : char = '💩';\n+    let ractor : char = '💩';\n \n     enum place {\n         space(u8),\n-        \n+        ch\n     };\n \n \n     let mut matrix: Vec<Vec<i32>> = vec![\n"
+                },
+                {
+                    "date": 1726250007404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n     let ractor : char = '💩';\n \n     enum place {\n         space(u8),\n-        ch\n+        ractor(char)\n     };\n \n \n     let mut matrix: Vec<Vec<i32>> = vec![\n"
+                },
+                {
+                    "date": 1726250031274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,13 @@\n     let ractor : char = '💩';\n \n     enum place {\n         space(u8),\n-        ractor(char)\n+        ractor(char),\n     };\n \n \n-    let mut matrix: Vec<Vec<i32>> = vec![\n+    let mut matrix: Vec<Vec<place>> = vec![\n         vec![1, 2, 3, 4],\n         vec![5, 6, 7, 8],\n         vec![9, 10, 11, 12],\n     ];\n"
+                },
+                {
+                    "date": 1726250041212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     };\n \n \n     let mut matrix: Vec<Vec<place>> = vec![\n-        vec![1, 2, 3, 4],\n+        vec![ractor(char), 2, 3, 4],\n         vec![5, 6, 7, 8],\n         vec![9, 10, 11, 12],\n     ];\n \n"
+                },
+                {
+                    "date": 1726250053003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     };\n \n \n     let mut matrix: Vec<Vec<place>> = vec![\n-        vec![ractor(char), 2, 3, 4],\n+        vec![ractor(ractor), space(2, 3, 4],\n         vec![5, 6, 7, 8],\n         vec![9, 10, 11, 12],\n     ];\n \n"
+                },
+                {
+                    "date": 1726250065962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     };\n \n \n     let mut matrix: Vec<Vec<place>> = vec![\n-        vec![ractor(ractor), space(2, 3, 4],\n+        vec![place::ractor(ractor), space(2), 3, 4],\n         vec![5, 6, 7, 8],\n         vec![9, 10, 11, 12],\n     ];\n \n"
+                },
+                {
+                    "date": 1726250134675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n         space(u8),\n         ractor(char),\n     };\n \n+    \n \n     let mut matrix: Vec<Vec<place>> = vec![\n         vec![place::ractor(ractor), space(2), 3, 4],\n         vec![5, 6, 7, 8],\n"
+                },
+                {
+                    "date": 1726250140774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         space(u8),\n         ractor(char),\n     };\n \n-    \n+    fn \n \n     let mut matrix: Vec<Vec<place>> = vec![\n         vec![place::ractor(ractor), space(2), 3, 4],\n         vec![5, 6, 7, 8],\n"
+                },
+                {
+                    "date": 1726250156401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         space(u8),\n         ractor(char),\n     };\n \n-    fn \n+    fn p()\n \n     let mut matrix: Vec<Vec<place>> = vec![\n         vec![place::ractor(ractor), space(2), 3, 4],\n         vec![5, 6, 7, 8],\n"
+                },
+                {
+                    "date": 1726250161433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         space(u8),\n         ractor(char),\n     };\n \n-    fn p()\n+    fn p(x)\n \n     let mut matrix: Vec<Vec<place>> = vec![\n         vec![place::ractor(ractor), space(2), 3, 4],\n         vec![5, 6, 7, 8],\n"
+                },
+                {
+                    "date": 1726250166633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         space(u8),\n         ractor(char),\n     };\n \n-    fn p(x)\n+    fn p(i:)\n \n     let mut matrix: Vec<Vec<place>> = vec![\n         vec![place::ractor(ractor), space(2), 3, 4],\n         vec![5, 6, 7, 8],\n"
+                },
+                {
+                    "date": 1726250172790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         space(u8),\n         ractor(char),\n     };\n \n-    fn p(i:)\n+    fn p(i:place) \n \n     let mut matrix: Vec<Vec<place>> = vec![\n         vec![place::ractor(ractor), space(2), 3, 4],\n         vec![5, 6, 7, 8],\n"
+                },
+                {
+                    "date": 1726250182672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         space(u8),\n         ractor(char),\n     };\n \n-    fn p(i:place) \n+    fn p(i:place) -\n \n     let mut matrix: Vec<Vec<place>> = vec![\n         vec![place::ractor(ractor), space(2), 3, 4],\n         vec![5, 6, 7, 8],\n"
+                },
+                {
+                    "date": 1726250191362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,12 @@\n         space(u8),\n         ractor(char),\n     };\n \n-    fn p(i:place) -\n+    fn p(i:place) -> place{\n \n+    }\n+\n     let mut matrix: Vec<Vec<place>> = vec![\n         vec![place::ractor(ractor), space(2), 3, 4],\n         vec![5, 6, 7, 8],\n         vec![9, 10, 11, 12],\n"
+                },
+                {
+                    "date": 1726250197279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n         space(u8),\n         ractor(char),\n     };\n \n-    fn p(i:place) -> place{\n+    fn p(i:place) -> place::<{\n \n     }\n \n     let mut matrix: Vec<Vec<place>> = vec![\n"
+                },
+                {
+                    "date": 1726250204119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n         space(u8),\n         ractor(char),\n     };\n \n-    fn p(i:place) -> place::<{\n-\n+    fn p(i:place) -> place::<T>{\n+        \n     }\n \n     let mut matrix: Vec<Vec<place>> = vec![\n         vec![place::ractor(ractor), space(2), 3, 4],\n"
+                },
+                {
+                    "date": 1726250224887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         ractor(char),\n     };\n \n     fn p(i:place) -> place::<T>{\n-        \n+        if\n     }\n \n     let mut matrix: Vec<Vec<place>> = vec![\n         vec![place::ractor(ractor), space(2), 3, 4],\n"
+                },
+                {
+                    "date": 1726250231146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         ractor(char),\n     };\n \n     fn p(i:place) -> place::<T>{\n-        if\n+        if T \n     }\n \n     let mut matrix: Vec<Vec<place>> = vec![\n         vec![place::ractor(ractor), space(2), 3, 4],\n"
+                },
+                {
+                    "date": 1726250238020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         ractor(char),\n     };\n \n     fn p(i:place) -> place::<T>{\n-        if T \n+        if T == space(u8)\n     }\n \n     let mut matrix: Vec<Vec<place>> = vec![\n         vec![place::ractor(ractor), space(2), 3, 4],\n"
+                },
+                {
+                    "date": 1726250244146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,11 @@\n         ractor(char),\n     };\n \n     fn p(i:place) -> place::<T>{\n-        if T == space(u8)\n+        if T == space(u8){\n+            \n+        }\n     }\n \n     let mut matrix: Vec<Vec<place>> = vec![\n         vec![place::ractor(ractor), space(2), 3, 4],\n"
+                },
+                {
+                    "date": 1726250250642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     };\n \n     fn p(i:place) -> place::<T>{\n         if T == space(u8){\n-            \n+            space(u8)\n         }\n     }\n \n     let mut matrix: Vec<Vec<place>> = vec![\n"
+                },
+                {
+                    "date": 1726250259088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,10 @@\n \n     fn p(i:place) -> place::<T>{\n         if T == space(u8){\n             space(u8)\n+        } else {\n+            ractor(char)\n         }\n     }\n \n     let mut matrix: Vec<Vec<place>> = vec![\n"
+                },
+                {
+                    "date": 1726250301684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,30 +1,30 @@\n+#[derive(Debug)]\n+enum Place {\n+    Space(u8),\n+    Ractor(char),\n+}\n+\n fn main() {\n+    let ractor: char = '💩';\n \n-    let ractor : char = '💩';\n-\n-    enum place {\n-        space(u8),\n-        ractor(char),\n-    };\n-\n-    fn p(i:place) -> place::<T>{\n-        if T == space(u8){\n-            space(u8)\n-        } else {\n-            ractor(char)\n+    fn p(i: Place) -> Place {\n+        match i {\n+            Place::Space(_) => Place::Space(0), // ตัวอย่างการคืนค่า Space\n+            Place::Ractor(_) => Place::Ractor(' '), // ตัวอย่างการคืนค่า Ractor\n         }\n     }\n \n-    let mut matrix: Vec<Vec<place>> = vec![\n-        vec![place::ractor(ractor), space(2), 3, 4],\n-        vec![5, 6, 7, 8],\n-        vec![9, 10, 11, 12],\n+    let mut matrix: Vec<Vec<Place>> = vec![\n+        vec![Place::Ractor(ractor), Place::Space(2), Place::Space(3), Place::Space(4)],\n+        vec![Place::Space(5), Place::Space(6), Place::Space(7), Place::Space(8)],\n+        vec![Place::Space(9), Place::Space(10), Place::Space(11), Place::Space(12)],\n     ];\n \n-    matrix[1][3] = 0;\n+    // แก้ไขค่าใน matrix ให้ถูกต้องตามประเภท\n+    matrix[1][3] = Place::Space(0);\n \n+    // พิมพ์ matrix\n     for row in &matrix {\n         println!(\"{:?}\", row); \n     }\n-    \n }\n"
+                },
+                {
+                    "date": 1726250310316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         }\n     }\n \n     let mut matrix: Vec<Vec<Place>> = vec![\n-        vec![Place::Ractor(ractor), Place::Space(2), Place::Space(3), Place::Space(4)],\n+        vec![practor), Place::Space(2), Place::Space(3), Place::Space(4)],\n         vec![Place::Space(5), Place::Space(6), Place::Space(7), Place::Space(8)],\n         vec![Place::Space(9), Place::Space(10), Place::Space(11), Place::Space(12)],\n     ];\n \n"
+                },
+                {
+                    "date": 1726250320374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         }\n     }\n \n     let mut matrix: Vec<Vec<Place>> = vec![\n-        vec![practor), Place::Space(2), Place::Space(3), Place::Space(4)],\n+        vec![p(ractor), p(1), Place::Space(3), Place::Space(4)],\n         vec![Place::Space(5), Place::Space(6), Place::Space(7), Place::Space(8)],\n         vec![Place::Space(9), Place::Space(10), Place::Space(11), Place::Space(12)],\n     ];\n \n"
+                },
+                {
+                    "date": 1726250327947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         }\n     }\n \n     let mut matrix: Vec<Vec<Place>> = vec![\n-        vec![p(ractor), p(1), Place::Space(3), Place::Space(4)],\n+        vec![p(ractor), p(0), p(0), Place::Space(4)],\n         vec![Place::Space(5), Place::Space(6), Place::Space(7), Place::Space(8)],\n         vec![Place::Space(9), Place::Space(10), Place::Space(11), Place::Space(12)],\n     ];\n \n"
+                },
+                {
+                    "date": 1726250334506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,10 @@\n         }\n     }\n \n     let mut matrix: Vec<Vec<Place>> = vec![\n-        vec![p(ractor), p(0), p(0), Place::Space(4)],\n-        vec![Place::Space(5), Place::Space(6), Place::Space(7), Place::Space(8)],\n+        vec![p(ractor), p(0), p(0), p(0)],\n+        vec![p(0), p(0), Place::Space(7), Place::Space(8)],\n         vec![Place::Space(9), Place::Space(10), Place::Space(11), Place::Space(12)],\n     ];\n \n     // แก้ไขค่าใน matrix ให้ถูกต้องตามประเภท\n"
+                },
+                {
+                    "date": 1726250341799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n     }\n \n     let mut matrix: Vec<Vec<Place>> = vec![\n         vec![p(ractor), p(0), p(0), p(0)],\n-        vec![p(0), p(0), Place::Space(7), Place::Space(8)],\n-        vec![Place::Space(9), Place::Space(10), Place::Space(11), Place::Space(12)],\n+        vec![p(0), p(0), p(0), p(0)],\n+        vec![p(0), Place::Space(10), Place::Space(11), Place::Space(12)],\n     ];\n \n     // แก้ไขค่าใน matrix ให้ถูกต้องตามประเภท\n     matrix[1][3] = Place::Space(0);\n"
+                },
+                {
+                    "date": 1726250348317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n \n     let mut matrix: Vec<Vec<Place>> = vec![\n         vec![p(ractor), p(0), p(0), p(0)],\n         vec![p(0), p(0), p(0), p(0)],\n-        vec![p(0), Place::Space(10), Place::Space(11), Place::Space(12)],\n+        vec![p(0), p(0), p(0), p(0)],\n     ];\n \n     // แก้ไขค่าใน matrix ให้ถูกต้องตามประเภท\n     matrix[1][3] = Place::Space(0);\n"
+                },
+                {
+                    "date": 1726250372094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,27 +4,24 @@\n     Ractor(char),\n }\n \n fn main() {\n-    let ractor: char = '💩';\n+    let c: char = '💩';\n \n-    fn p(i: Place) -> Place {\n-        match i {\n-            Place::Space(_) => Place::Space(0), // ตัวอย่างการคืนค่า Space\n-            Place::Ractor(_) => Place::Ractor(' '), // ตัวอย่างการคืนค่า Ractor\n-        }\n+    fn p(value: u8) -> Place {\n+        Place::Space(value) // เปลี่ยนค่าทุกอย่างเป็น Space\n     }\n \n     let mut matrix: Vec<Vec<Place>> = vec![\n-        vec![p(ractor), p(0), p(0), p(0)],\n-        vec![p(0), p(0), p(0), p(0)],\n-        vec![p(0), p(0), p(0), p(0)],\n+        vec![Place::Ractor(c), p(1), p(2), p(3)],\n+        vec![p(4), p(5), p(6), p(7)],\n+        vec![p(8), p(9), p(10), p(11)],\n     ];\n \n-    // แก้ไขค่าใน matrix ให้ถูกต้องตามประเภท\n+    // แก้ไขค่าใน matrix ให้เป็น Place::Space(0)\n     matrix[1][3] = Place::Space(0);\n \n     // พิมพ์ matrix\n     for row in &matrix {\n-        println!(\"{:?}\", row); \n+        println!(\"{:?}\", row);\n     }\n }\n"
+                },
+                {
+                    "date": 1726250498958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,13 @@\n \n fn main() {\n     let c: char = '💩';\n \n-    fn p(value: u8) -> Place {\n-        Place::Space(value) // เปลี่ยนค่าทุกอย่างเป็น Space\n+    fn process(value: Place) -> Place {\n+        match value {\n+            Place::Space(val) => Place::Space(val), // คืนค่า Space(u8) ตามประเภท\n+            Place::Ractor(c) => Place::Ractor(c),    // คืนค่า Ractor(char) ตามประเภท\n+        }\n     }\n \n     let mut matrix: Vec<Vec<Place>> = vec![\n         vec![Place::Ractor(c), p(1), p(2), p(3)],\n"
+                },
+                {
+                    "date": 1726250505574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n fn main() {\n     let c: char = '💩';\n \n-    fn process(value: Place) -> Place {\n+    fn p(value: Place) -> Place {\n         match value {\n             Place::Space(val) => Place::Space(val), // คืนค่า Space(u8) ตามประเภท\n             Place::Ractor(c) => Place::Ractor(c),    // คืนค่า Ractor(char) ตามประเภท\n         }\n"
+                },
+                {
+                    "date": 1726250559035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n fn main() {\n     let c: char = '💩';\n \n-    fn p(value: Place) -> Place {\n+    fn p(value: U8::char) -> Place {\n         match value {\n             Place::Space(val) => Place::Space(val), // คืนค่า Space(u8) ตามประเภท\n             Place::Ractor(c) => Place::Ractor(c),    // คืนค่า Ractor(char) ตามประเภท\n         }\n"
+                },
+                {
+                    "date": 1726250612787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,20 +3,23 @@\n     Space(u8),\n     Ractor(char),\n }\n \n+// ฟังก์ชันที่รับค่าเป็น u8 หรือ char และคืนค่าเป็น Place\n+fn p(value: u8) -> Place {\n+    Place::Space(value) // คืนค่าเป็น Place::Space(u8)\n+}\n+\n+fn p_char(c: char) -> Place {\n+    Place::Ractor(c) // คืนค่าเป็น Place::Ractor(char)\n+}\n+\n fn main() {\n     let c: char = '💩';\n \n-    fn p(value: U8::char) -> Place {\n-        match value {\n-            Place::Space(val) => Place::Space(val), // คืนค่า Space(u8) ตามประเภท\n-            Place::Ractor(c) => Place::Ractor(c),    // คืนค่า Ractor(char) ตามประเภท\n-        }\n-    }\n-\n+    // สร้าง matrix โดยใช้ enum Place\n     let mut matrix: Vec<Vec<Place>> = vec![\n-        vec![Place::Ractor(c), p(1), p(2), p(3)],\n+        vec![p_char(c), p(1), p(2), p(3)],\n         vec![p(4), p(5), p(6), p(7)],\n         vec![p(8), p(9), p(10), p(11)],\n     ];\n \n"
+                },
+                {
+                    "date": 1726250738710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,16 +3,9 @@\n     Space(u8),\n     Ractor(char),\n }\n \n-// ฟังก์ชันที่รับค่าเป็น u8 หรือ char และคืนค่าเป็น Place\n-fn p(value: u8) -> Place {\n-    Place::Space(value) // คืนค่าเป็น Place::Space(u8)\n-}\n \n-fn p_char(c: char) -> Place {\n-    Place::Ractor(c) // คืนค่าเป็น Place::Ractor(char)\n-}\n \n fn main() {\n     let c: char = '💩';\n \n"
+                },
+                {
+                    "date": 1726250745594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,11 +10,11 @@\n     let c: char = '💩';\n \n     // สร้าง matrix โดยใช้ enum Place\n     let mut matrix: Vec<Vec<Place>> = vec![\n-        vec![p_char(c), p(1), p(2), p(3)],\n-        vec![p(4), p(5), p(6), p(7)],\n-        vec![p(8), p(9), p(10), p(11)],\n+        vec![],\n+        vec![],\n+        vec![],\n     ];\n \n     // แก้ไขค่าใน matrix ให้เป็น Place::Space(0)\n     matrix[1][3] = Place::Space(0);\n"
+                },
+                {
+                    "date": 1726250752230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,11 +10,11 @@\n     let c: char = '💩';\n \n     // สร้าง matrix โดยใช้ enum Place\n     let mut matrix: Vec<Vec<Place>> = vec![\n+        vec![1,0,0,0],\n         vec![],\n         vec![],\n-        vec![],\n     ];\n \n     // แก้ไขค่าใน matrix ให้เป็น Place::Space(0)\n     matrix[1][3] = Place::Space(0);\n"
+                },
+                {
+                    "date": 1726250758322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n \n     // สร้าง matrix โดยใช้ enum Place\n     let mut matrix: Vec<Vec<Place>> = vec![\n         vec![1,0,0,0],\n+        vec![0,,0,0,0],\n         vec![],\n-        vec![],\n     ];\n \n     // แก้ไขค่าใน matrix ให้เป็น Place::Space(0)\n     matrix[1][3] = Place::Space(0);\n"
+                },
+                {
+                    "date": 1726250766667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,10 @@\n     // สร้าง matrix โดยใช้ enum Place\n     let mut matrix: Vec<Vec<Place>> = vec![\n         vec![1,0,0,0],\n         vec![0,,0,0,0],\n-        vec![],\n+        vec![0,,0,0,0],\n+        vec![0,,0,0,0],\n     ];\n \n     // แก้ไขค่าใน matrix ให้เป็น Place::Space(0)\n     matrix[1][3] = Place::Space(0);\n"
+                },
+                {
+                    "date": 1726250792265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,13 +9,13 @@\n fn main() {\n     let c: char = '💩';\n \n     // สร้าง matrix โดยใช้ enum Place\n-    let mut matrix: Vec<Vec<Place>> = vec![\n+    let mut matrix: Vec<Vec<u8>> = vec![\n         vec![1,0,0,0],\n         vec![0,,0,0,0],\n         vec![0,,0,0,0],\n-        vec![0,,0,0,0],\n+        vec![0,,0,0,0]\n     ];\n \n     // แก้ไขค่าใน matrix ให้เป็น Place::Space(0)\n     matrix[1][3] = Place::Space(0);\n"
+                },
+                {
+                    "date": 1726250798160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,6 @@\n         vec![0,,0,0,0]\n     ];\n \n     // แก้ไขค่าใน matrix ให้เป็น Place::Space(0)\n-    matrix[1][3] = Place::Space(0);\n \n-    // พิมพ์ matrix\n-    for row in &matrix {\n-        println!(\"{:?}\", row);\n-    }\n }\n"
+                },
+                {
+                    "date": 1726250834080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,13 +10,13 @@\n     let c: char = '💩';\n \n     // สร้าง matrix โดยใช้ enum Place\n     let mut matrix: Vec<Vec<u8>> = vec![\n-        vec![1,0,0,0],\n-        vec![0,,0,0,0],\n-        vec![0,,0,0,0],\n-        vec![0,,0,0,0]\n+        vec![1, 0, 0, 0, 0],\n+        vec![0, 0, 0, 0, 0],\n+        vec![0, 0, 0, 0, 0],\n+        vec![0, 0, 0, 0, 0]\n     ];\n \n-    // แก้ไขค่าใน matrix ให้เป็น Place::Space(0)\n \n+\n }\n"
+                },
+                {
+                    "date": 1726250839371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,12 +10,12 @@\n     let c: char = '💩';\n \n     // สร้าง matrix โดยใช้ enum Place\n     let mut matrix: Vec<Vec<u8>> = vec![\n-        vec![1, 0, 0, 0, 0],\n-        vec![0, 0, 0, 0, 0],\n-        vec![0, 0, 0, 0, 0],\n-        vec![0, 0, 0, 0, 0]\n+        vec![1,0,0,0],\n+        vec![0,,0,0,0],\n+        vec![0,,0,0,0],\n+        vec![0,,0,0,0]\n     ];\n \n \n \n"
+                },
+                {
+                    "date": 1726250846240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,12 +10,12 @@\n     let c: char = '💩';\n \n     // สร้าง matrix โดยใช้ enum Place\n     let mut matrix: Vec<Vec<u8>> = vec![\n-        vec![1,0,0,0],\n-        vec![0,,0,0,0],\n-        vec![0,,0,0,0],\n-        vec![0,,0,0,0]\n+        vec![1, 0, 0, 0, 0],\n+        vec![0, 0, 0, 0, 0],\n+        vec![0, 0, 0, 0, 0],\n+        vec![0, 0, 0, 0, 0]\n     ];\n \n \n \n"
+                },
+                {
+                    "date": 1726250854025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,13 +10,18 @@\n     let c: char = '💩';\n \n     // สร้าง matrix โดยใช้ enum Place\n     let mut matrix: Vec<Vec<u8>> = vec![\n+        vec![1,0,0,0],\n+        vec![0,,0,0,0],\n+        vec![0,,0,0,0],\n+        vec![0,,0,0,0]\n+    ];\n+\n+    let mut matrix: Vec<Vec<u8>> = vec![\n         vec![1, 0, 0, 0, 0],\n         vec![0, 0, 0, 0, 0],\n         vec![0, 0, 0, 0, 0],\n         vec![0, 0, 0, 0, 0]\n     ];\n \n-\n-\n }\n"
+                },
+                {
+                    "date": 1726250864940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,12 +16,7 @@\n         vec![0,,0,0,0],\n         vec![0,,0,0,0]\n     ];\n \n-    let mut matrix: Vec<Vec<u8>> = vec![\n-        vec![1, 0, 0, 0, 0],\n-        vec![0, 0, 0, 0, 0],\n-        vec![0, 0, 0, 0, 0],\n-        vec![0, 0, 0, 0, 0]\n-    ];\n \n+\n }\n"
+                },
+                {
+                    "date": 1726250872404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,11 +11,11 @@\n \n     // สร้าง matrix โดยใช้ enum Place\n     let mut matrix: Vec<Vec<u8>> = vec![\n         vec![1,0,0,0],\n-        vec![0,,0,0,0],\n-        vec![0,,0,0,0],\n-        vec![0,,0,0,0]\n+        vec![0,0,0,0],\n+        vec![0,0,0,0],\n+        vec![0,0,0,0]\n     ];\n \n \n \n"
+                },
+                {
+                    "date": 1726250936340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,36 @@\n-#[derive(Debug)]\n-enum Place {\n-    Space(u8),\n-    Ractor(char),\n-}\n-\n-\n-\n fn main() {\n     let c: char = '💩';\n \n-    // สร้าง matrix โดยใช้ enum Place\n+    // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let mut matrix: Vec<Vec<u8>> = vec![\n-        vec![1,0,0,0],\n-        vec![0,0,0,0],\n-        vec![0,0,0,0],\n-        vec![0,0,0,0]\n+        vec![1, 0, 0, 0, 0],\n+        vec![0, 0, 0, 0, 0],\n+        vec![0, 0, 0, 0, 0],\n+        vec![0, 0, 0, 0, 0],\n     ];\n \n+    // ค้นหาตำแหน่งของค่า 1\n+    let mut positions: Vec<(usize, usize)> = Vec::new();\n+    for (i, row) in matrix.iter().enumerate() {\n+        for (j, &val) in row.iter().enumerate() {\n+            if val == 1 {\n+                positions.push((i, j));\n+            }\n+        }\n+    }\n \n+    // พิมพ์ matrix โดยแสดง c แทนค่า 1\n+    for row in &matrix {\n+        for &val in row {\n+            if val == 1 {\n+                print!(\"{}\", c);\n+            } else {\n+                print!(\"{}\", val);\n+            }\n+        }\n+        println!(); // พิมพ์บรรทัดใหม่\n+    }\n \n+    // พิมพ์ตำแหน่งที่พบค่า 1\n+    println!(\"Positions of 1: {:?}\", positions);\n }\n"
+                },
+                {
+                    "date": 1726250977016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let mut matrix: Vec<Vec<u8>> = vec![\n         vec![1, 0, 0, 0, 0],\n+        vec![0, 1, 0, 0, 0],\n         vec![0, 0, 0, 0, 0],\n         vec![0, 0, 0, 0, 0],\n-        vec![0, 0, 0, 0, 0],\n     ];\n \n     // ค้นหาตำแหน่งของค่า 1\n     let mut positions: Vec<(usize, usize)> = Vec::new();\n"
+                },
+                {
+                    "date": 1726251012212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n fn main() {\n     let c: char = '💩';\n-\n+    let c: char = '💩';\n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let mut matrix: Vec<Vec<u8>> = vec![\n-        vec![1, 0, 0, 0, 0],\n+        vec![0, 0, 0, 0, 0],\n         vec![0, 1, 0, 0, 0],\n         vec![0, 0, 0, 0, 0],\n         vec![0, 0, 0, 0, 0],\n     ];\n"
+                },
+                {
+                    "date": 1726251018932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n fn main() {\n     let c: char = '💩';\n-    let c: char = '💩';\n+    let p: char = '[]';\n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let mut matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n         vec![0, 1, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726251033361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n fn main() {\n     let c: char = '💩';\n-    let p: char = '[]';\n+    let p: s = '[ ]';\n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let mut matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n         vec![0, 1, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726251039356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n fn main() {\n     let c: char = '💩';\n-    let p: s = '[ ]';\n+    let p: &str = '[ ]';\n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let mut matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n         vec![0, 1, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726251045502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n fn main() {\n     let c: char = '💩';\n-    let p: &str = '[ ]';\n+    let p: &str = \"[ ]\";\n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let mut matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n         vec![0, 1, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726251080494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n fn main() {\n-    let c: char = '💩';\n-    let p: &str = \"[ ]\";\n+    let c: char = '💩'; // ตัวแทนค่า 1\n+    let p: &str = \"[ ]\"; // ตัวแทนค่า 0\n+\n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let mut matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n         vec![0, 1, 0, 0, 0],\n@@ -18,15 +19,15 @@\n             }\n         }\n     }\n \n-    // พิมพ์ matrix โดยแสดง c แทนค่า 1\n+    // พิมพ์ matrix โดยแสดง c แทนค่า 1 และ p แทนค่า 0\n     for row in &matrix {\n         for &val in row {\n             if val == 1 {\n-                print!(\"{}\", c);\n-            } else {\n-                print!(\"{}\", val);\n+                print!(\"{}\", c); // แสดงตัวแทนค่า 1\n+            } else if val == 0 {\n+                print!(\"{}\", p); // แสดงตัวแทนค่า 0\n             }\n         }\n         println!(); // พิมพ์บรรทัดใหม่\n     }\n"
+                },
+                {
+                    "date": 1726251097597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n fn main() {\n-    let c: char = '💩'; // ตัวแทนค่า 1\n+    let c: &str = '💩'; // ตัวแทนค่า 1\n     let p: &str = \"[ ]\"; // ตัวแทนค่า 0\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let mut matrix: Vec<Vec<u8>> = vec![\n"
+                },
+                {
+                    "date": 1726251103881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n fn main() {\n-    let c: &str = '💩'; // ตัวแทนค่า 1\n+    let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n     let p: &str = \"[ ]\"; // ตัวแทนค่า 0\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let mut matrix: Vec<Vec<u8>> = vec![\n"
+                },
+                {
+                    "date": 1726251117027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n     let p: &str = \"[ ]\"; // ตัวแทนค่า 0\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n-    let mut matrix: Vec<Vec<u8>> = vec![\n+    let  matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n         vec![0, 1, 0, 0, 0],\n         vec![0, 0, 0, 0, 0],\n         vec![0, 0, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726251126376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n-    let p: &str = \"[ ]\"; // ตัวแทนค่า 0\n+    let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n-    let  matrix: Vec<Vec<u8>> = vec![\n+    let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n         vec![0, 1, 0, 0, 0],\n         vec![0, 0, 0, 0, 0],\n         vec![0, 0, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726251131826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n-    let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n+    let p: &str = \"[   ]\"; // ตัวแทนค่า 0\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726251138397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n-    let p: &str = \"[   ]\"; // ตัวแทนค่า 0\n+    let p: &str = \"[--]\"; // ตัวแทนค่า 0\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726251146841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n fn main() {\n-    let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n-    let p: &str = \"[--]\"; // ตัวแทนค่า 0\n+    let c: &str = \"[ 💩 ]\"; // ตัวแทนค่า 1\n+    let p: &str = \"[-- ]\"; // ตัวแทนค่า 0\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726251153697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n fn main() {\n     let c: &str = \"[ 💩 ]\"; // ตัวแทนค่า 1\n-    let p: &str = \"[-- ]\"; // ตัวแทนค่า 0\n+    let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726251167512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n fn main() {\n-    let c: &str = \"[ 💩 ]\"; // ตัวแทนค่า 1\n-    let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n+    let c: &str = \"[ 💩  ]\"; // ตัวแทนค่า 1\n+    let p: &str = \"[     ]\"; // ตัวแทนค่า 0\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726251173180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n fn main() {\n-    let c: &str = \"[ 💩  ]\"; // ตัวแทนค่า 1\n+    let c: &str = \"[ 💩. ]\"; // ตัวแทนค่า 1\n     let p: &str = \"[     ]\"; // ตัวแทนค่า 0\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n"
+                },
+                {
+                    "date": 1726251178904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n fn main() {\n-    let c: &str = \"[ 💩. ]\"; // ตัวแทนค่า 1\n+    let c: &str = \"[ 💩 ]\"; // ตัวแทนค่า 1\n     let p: &str = \"[     ]\"; // ตัวแทนค่า 0\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n"
+                },
+                {
+                    "date": 1726251189367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n fn main() {\n-    let c: &str = \"[ 💩 ]\"; // ตัวแทนค่า 1\n+    let c: &str = \"[ 💩]\"; // ตัวแทนค่า 1\n     let p: &str = \"[     ]\"; // ตัวแทนค่า 0\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n"
+                },
+                {
+                    "date": 1726251194805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n fn main() {\n-    let c: &str = \"[ 💩]\"; // ตัวแทนค่า 1\n-    let p: &str = \"[     ]\"; // ตัวแทนค่า 0\n+    let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n+    let p: &str = \"[ ]\"; // ตัวแทนค่า 0\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726251361748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n-    let p: &str = \"[ ]\"; // ตัวแทนค่า 0\n+    let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726251419804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n     let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n+    le\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726251427138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n     let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n-    le\n+    ler t: &str = \"\"\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726251434511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n     let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n-    ler t: &str = \"\"\n+    ler t: &str = \"[🌲]\"\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726251447540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n-    let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n+    let p: &str = \"[☐]\"; // ตัวแทนค่า 0\n     ler t: &str = \"[🌲]\"\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n"
+                },
+                {
+                    "date": 1726251453251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n     let p: &str = \"[☐]\"; // ตัวแทนค่า 0\n-    ler t: &str = \"[🌲]\"\n+    ler t: &str = \"[🌲]\";\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726251495635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n-    let p: &str = \"[☐]\"; // ตัวแทนค่า 0\n-    ler t: &str = \"[🌲]\";\n+    let p: &str = \"[]\"; // ตัวแทนค่า 0\n+    let t: &str = \"[🌲]\";\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726251514570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n-    let p: &str = \"[]\"; // ตัวแทนค่า 0\n+    let p: &str = \"[ ]\"; // ตัวแทนค่า 0\n     let t: &str = \"[🌲]\";\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n"
+                },
+                {
+                    "date": 1726251538914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,15 @@\n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n-    let p: &str = \"[ ]\"; // ตัวแทนค่า 0\n+    let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n     let t: &str = \"[🌲]\";\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n         vec![0, 1, 0, 0, 0],\n         vec![0, 0, 0, 0, 0],\n-        vec![0, 0, 0, 0, 0],\n+        vec![0, 0, 0, 0, -1],\n     ];\n \n     // ค้นหาตำแหน่งของค่า 1\n     let mut positions: Vec<(usize, usize)> = Vec::new();\n"
+                },
+                {
+                    "date": 1726251546315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n         vec![0, 1, 0, 0, 0],\n         vec![0, 0, 0, 0, 0],\n-        vec![0, 0, 0, 0, -1],\n+        vec![0, 0, 0, 2, 2],\n     ];\n \n     // ค้นหาตำแหน่งของค่า 1\n     let mut positions: Vec<(usize, usize)> = Vec::new();\n"
+                },
+                {
+                    "date": 1726251551605,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n         vec![0, 1, 0, 0, 0],\n-        vec![0, 0, 0, 0, 0],\n-        vec![0, 0, 0, 2, 2],\n+        vec![2, 0, 0, 0, 0],\n+        vec![2, 2, 2, 2, 2],\n     ];\n \n     // ค้นหาตำแหน่งของค่า 1\n     let mut positions: Vec<(usize, usize)> = Vec::new();\n"
+                },
+                {
+                    "date": 1726251561178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n         vec![0, 1, 0, 0, 0],\n-        vec![2, 0, 0, 0, 0],\n+        vec![0, 2, 0, 0, 2],\n         vec![2, 2, 2, 2, 2],\n     ];\n \n     // ค้นหาตำแหน่งของค่า 1\n"
+                },
+                {
+                    "date": 1726251566658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n-        vec![0, 1, 0, 0, 0],\n+        vec![1, 1, 0, 0, 0],\n         vec![0, 2, 0, 0, 2],\n-        vec![2, 2, 2, 2, 2],\n+        vec![0, 2, 2, 2, 2],\n     ];\n \n     // ค้นหาตำแหน่งของค่า 1\n     let mut positions: Vec<(usize, usize)> = Vec::new();\n"
+                },
+                {
+                    "date": 1726251585103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 0, 0, 0],\n-        vec![1, 1, 0, 0, 0],\n+        vec![1, 0, 0, 0, 0],\n         vec![0, 2, 0, 0, 2],\n         vec![0, 2, 2, 2, 2],\n     ];\n \n@@ -27,8 +27,10 @@\n             if val == 1 {\n                 print!(\"{}\", c); // แสดงตัวแทนค่า 1\n             } else if val == 0 {\n                 print!(\"{}\", p); // แสดงตัวแทนค่า 0\n+            } else if val == 0 {\n+                print!(\"{}\", p); // แสดงตัวแทนค่า 0\n             }\n         }\n         println!(); // พิมพ์บรรทัดใหม่\n     }\n"
+                },
+                {
+                    "date": 1726251592924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,10 +27,10 @@\n             if val == 1 {\n                 print!(\"{}\", c); // แสดงตัวแทนค่า 1\n             } else if val == 0 {\n                 print!(\"{}\", p); // แสดงตัวแทนค่า 0\n-            } else if val == 0 {\n-                print!(\"{}\", p); // แสดงตัวแทนค่า 0\n+            } else if val == 2 {\n+                print!(\"{}\", thread_local! {}); // แสดงตัวแทนค่า 0\n             }\n         }\n         println!(); // พิมพ์บรรทัดใหม่\n     }\n"
+                },
+                {
+                    "date": 1726251599623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n                 print!(\"{}\", c); // แสดงตัวแทนค่า 1\n             } else if val == 0 {\n                 print!(\"{}\", p); // แสดงตัวแทนค่า 0\n             } else if val == 2 {\n-                print!(\"{}\", thread_local! {}); // แสดงตัวแทนค่า 0\n+                print!(\"{}\", t); \n             }\n         }\n         println!(); // พิมพ์บรรทัดใหม่\n     }\n"
+                },
+                {
+                    "date": 1726251625797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     let t: &str = \"[🌲]\";\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n-        vec![0, 0, 0, 0, 0],\n+        vec![0, 0, 2, 2, 0],\n         vec![1, 0, 0, 0, 0],\n         vec![0, 2, 0, 0, 2],\n         vec![0, 2, 2, 2, 2],\n     ];\n@@ -24,11 +24,11 @@\n     // พิมพ์ matrix โดยแสดง c แทนค่า 1 และ p แทนค่า 0\n     for row in &matrix {\n         for &val in row {\n             if val == 1 {\n-                print!(\"{}\", c); // แสดงตัวแทนค่า 1\n+                print!(\"{}\", c); \n             } else if val == 0 {\n-                print!(\"{}\", p); // แสดงตัวแทนค่า 0\n+                print!(\"{}\", p); \n             } else if val == 2 {\n                 print!(\"{}\", t); \n             }\n         }\n"
+                },
+                {
+                    "date": 1726251730305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,17 +10,8 @@\n         vec![0, 2, 0, 0, 2],\n         vec![0, 2, 2, 2, 2],\n     ];\n \n-    // ค้นหาตำแหน่งของค่า 1\n-    let mut positions: Vec<(usize, usize)> = Vec::new();\n-    for (i, row) in matrix.iter().enumerate() {\n-        for (j, &val) in row.iter().enumerate() {\n-            if val == 1 {\n-                positions.push((i, j));\n-            }\n-        }\n-    }\n \n     // พิมพ์ matrix โดยแสดง c แทนค่า 1 และ p แทนค่า 0\n     for row in &matrix {\n         for &val in row {\n"
+                },
+                {
+                    "date": 1726251735351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,10 +22,9 @@\n             } else if val == 2 {\n                 print!(\"{}\", t); \n             }\n         }\n-        println!(); // พิมพ์บรรทัดใหม่\n+        println!(); ม่\n     }\n \n-    // พิมพ์ตำแหน่งที่พบค่า 1\n-    println!(\"Positions of 1: {:?}\", positions);\n+\n }\n"
+                },
+                {
+                    "date": 1726251751435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,8 @@\n         vec![0, 2, 2, 2, 2],\n     ];\n \n \n-    // พิมพ์ matrix โดยแสดง c แทนค่า 1 และ p แทนค่า 0\n     for row in &matrix {\n         for &val in row {\n             if val == 1 {\n                 print!(\"{}\", c); \n@@ -22,9 +21,9 @@\n             } else if val == 2 {\n                 print!(\"{}\", t); \n             }\n         }\n-        println!(); ม่\n+        println!();\n     }\n \n \n }\n"
+                },
+                {
+                    "date": 1726251778606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             } else if val == 2 {\n                 print!(\"{}\", t); \n             }\n         }\n-        println!();\n+   \\\n     }\n \n \n }\n"
+                },
+                {
+                    "date": 1726251788956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             } else if val == 2 {\n                 print!(\"{}\", t); \n             }\n         }\n-   \\\n+        println!();\n     }\n \n \n }\n"
+                },
+                {
+                    "date": 1726258885092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+\n+\n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n     let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n     let t: &str = \"[🌲]\";\n"
+                },
+                {
+                    "date": 1726258891332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n+use std::\n \n-\n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n     let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n     let t: &str = \"[🌲]\";\n"
+                },
+                {
+                    "date": 1726258897961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-use std::\n+use std::io\n \n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n     let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n"
+                },
+                {
+                    "date": 1726258931999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-use std::io\n+use std::io;\n \n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n     let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n@@ -7,9 +7,9 @@\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 2, 2, 0],\n-        vec![1, 0, 0, 0, 0],\n+        vec![0, 0, 0, 0, 0],\n         vec![0, 2, 0, 0, 2],\n         vec![0, 2, 2, 2, 2],\n     ];\n \n"
+                },
+                {
+                    "date": 1726258939695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n         vec![0, 0, 2, 2, 0],\n         vec![0, 0, 0, 0, 0],\n         vec![0, 2, 0, 0, 2],\n         vec![0, 2, 2, 2, 2],\n+        vec![0, 2, 2, 2, 2],\n     ];\n \n \n     for row in &matrix {\n"
+                },
+                {
+                    "date": 1726258958754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,9 @@\n use std::io;\n \n+\n+\n+\n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n     let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n     let t: &str = \"[🌲]\";\n@@ -8,9 +11,9 @@\n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 2, 2, 0],\n         vec![0, 0, 0, 0, 0],\n-        vec![0, 2, 0, 0, 2],\n+        vec![0, 2, 1, 0, 2],\n         vec![0, 2, 2, 2, 2],\n         vec![0, 2, 2, 2, 2],\n     ];\n \n"
+                },
+                {
+                    "date": 1726258965322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n use std::io;\n \n \n+fn genIn\n \n-\n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n     let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n     let t: &str = \"[🌲]\";\n"
+                },
+                {
+                    "date": 1726258972427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n use std::io;\n \n \n-fn genIn\n+fn gen_in_line\n \n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n     let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n"
+                },
+                {
+                    "date": 1726258990062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n use std::io;\n \n \n-fn gen_in_line\n+fn gen_in_line(matrix: Vec<Vec<u8>>)\n \n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n     let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n"
+                },
+                {
+                    "date": 1726259001669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n use std::io;\n \n \n-fn gen_in_line(matrix: Vec<Vec<u8>>)\n+fn gen_in_line(matrix: Vec<Vec<u8>>){\n \n+}\n+\n fn main() {\n     let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n     let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n     let t: &str = \"[🌲]\";\n@@ -17,19 +19,8 @@\n         vec![0, 2, 2, 2, 2],\n     ];\n \n \n-    for row in &matrix {\n-        for &val in row {\n-            if val == 1 {\n-                print!(\"{}\", c); \n-            } else if val == 0 {\n-                print!(\"{}\", p); \n-            } else if val == 2 {\n-                print!(\"{}\", t); \n-            }\n-        }\n-        println!();\n-    }\n \n \n+\n }\n"
+                },
+                {
+                    "date": 1726259014013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,24 @@\n use std::io;\n \n \n fn gen_in_line(matrix: Vec<Vec<u8>>){\n-\n+    for row in &matrix {\n+        for &val in row {\n+            if val == 1 {\n+                print!(\"{}\", c); \n+            } else if val == 0 {\n+                print!(\"{}\", p); \n+            } else if val == 2 {\n+                print!(\"{}\", t); \n+            }\n+        }\n+        println!();\n+    }\n }\n \n fn main() {\n-    let c: &str = \"[💩]\"; // ตัวแทนค่า 1\n+    con c: &str = \"[💩]\"; // ตัวแทนค่า 1\n     let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n     let t: &str = \"[🌲]\";\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n"
+                },
+                {
+                    "date": 1726259023509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,11 @@\n     }\n }\n \n fn main() {\n-    con c: &str = \"[💩]\"; // ตัวแทนค่า 1\n-    let p: &str = \"[  ]\"; // ตัวแทนค่า 0\n-    let t: &str = \"[🌲]\";\n+    const  C: &str = \"[💩]\"; // ตัวแทนค่า 1\n+    const p: &str = \"[  ]\"; // ตัวแทนค่า 0\n+    const t: &str = \"[🌲]\";\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 2, 2, 0],\n"
+                },
+                {
+                    "date": 1726259030294,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n }\n \n fn main() {\n     const  C: &str = \"[💩]\"; // ตัวแทนค่า 1\n-    const p: &str = \"[  ]\"; // ตัวแทนค่า 0\n-    const t: &str = \"[🌲]\";\n+    const P: &str = \"[  ]\"; // ตัวแทนค่า 0\n+    const T: &str = \"[🌲]\";\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 2, 2, 0],\n"
+                },
+                {
+                    "date": 1726259035512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,11 @@\n fn gen_in_line(matrix: Vec<Vec<u8>>){\n     for row in &matrix {\n         for &val in row {\n             if val == 1 {\n-                print!(\"{}\", c); \n+                print!(\"{}\", C); \n             } else if val == 0 {\n-                print!(\"{}\", p); \n+                print!(\"{}\", P); \n             } else if val == 2 {\n                 print!(\"{}\", t); \n             }\n         }\n"
+                },
+                {
+                    "date": 1726259041144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,24 +1,23 @@\n use std::io;\n \n-\n-fn gen_in_line(matrix: Vec<Vec<u8>>){\n+fn gen_in_line(matrix: Vec<Vec<u8>>) {\n     for row in &matrix {\n         for &val in row {\n             if val == 1 {\n-                print!(\"{}\", C); \n+                print!(\"{}\", C);\n             } else if val == 0 {\n-                print!(\"{}\", P); \n+                print!(\"{}\", P);\n             } else if val == 2 {\n-                print!(\"{}\", t); \n+                print!(\"{}\", T);\n             }\n         }\n         println!();\n     }\n }\n \n fn main() {\n-    const  C: &str = \"[💩]\"; // ตัวแทนค่า 1\n+    const C: &str = \"[💩]\"; // ตัวแทนค่า 1\n     const P: &str = \"[  ]\"; // ตัวแทนค่า 0\n     const T: &str = \"[🌲]\";\n \n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n@@ -28,10 +27,5 @@\n         vec![0, 2, 1, 0, 2],\n         vec![0, 2, 2, 2, 2],\n         vec![0, 2, 2, 2, 2],\n     ];\n-\n-\n-\n-\n-\n }\n"
+                },
+                {
+                    "date": 1726259052342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,12 +15,10 @@\n     }\n }\n \n fn main() {\n-    const C: &str = \"[💩]\"; // ตัวแทนค่า 1\n-    const P: &str = \"[  ]\"; // ตัวแทนค่า 0\n-    const T: &str = \"[🌲]\";\n \n+\n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 2, 2, 0],\n         vec![0, 0, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726259073131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,10 @@\n use std::io;\n \n+const C: &str = \"[💩]\"; // ตัวแทนค่า 1\n+const P: &str = \"[  ]\"; // ตัวแทนค่า 0\n+const TREE: &str = \"[🌲]\";\n+\n fn gen_in_line(matrix: Vec<Vec<u8>>) {\n     for row in &matrix {\n         for &val in row {\n             if val == 1 {\n@@ -15,10 +19,8 @@\n     }\n }\n \n fn main() {\n-\n-\n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 2, 2, 0],\n         vec![0, 0, 0, 0, 0],\n"
+                },
+                {
+                    "date": 1726259081706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n use std::io;\n \n-const C: &str = \"[💩]\"; // ตัวแทนค่า 1\n-const P: &str = \"[  ]\"; // ตัวแทนค่า 0\n+const SHIT: &str = \"[💩]\"; // ตัวแทนค่า 1\n+const PLACE: &str = \"[  ]\"; // ตัวแทนค่า 0\n const TREE: &str = \"[🌲]\";\n \n fn gen_in_line(matrix: Vec<Vec<u8>>) {\n     for row in &matrix {\n"
+                },
+                {
+                    "date": 1726259087672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,11 @@\n fn gen_in_line(matrix: Vec<Vec<u8>>) {\n     for row in &matrix {\n         for &val in row {\n             if val == 1 {\n-                print!(\"{}\", C);\n+                print!(\"{}\", SHIT);\n             } else if val == 0 {\n-                print!(\"{}\", P);\n+                print!(\"{}\", PLACE);\n             } else if val == 2 {\n                 print!(\"{}\", T);\n             }\n         }\n"
+                },
+                {
+                    "date": 1726259108981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n                 print!(\"{}\", SHIT);\n             } else if val == 0 {\n                 print!(\"{}\", PLACE);\n             } else if val == 2 {\n-                print!(\"{}\", T);\n+                print!(\"{}\", TREE);\n             }\n         }\n         println!();\n     }\n@@ -27,5 +27,10 @@\n         vec![0, 2, 1, 0, 2],\n         vec![0, 2, 2, 2, 2],\n         vec![0, 2, 2, 2, 2],\n     ];\n+\n+\n+\n+\n+    \n }\n"
+                },
+                {
+                    "date": 1726259114892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,11 @@\n         vec![0, 2, 2, 2, 2],\n         vec![0, 2, 2, 2, 2],\n     ];\n \n+    loop{\n+        \n+    }\n \n \n \n-    \n }\n"
+                },
+                {
+                    "date": 1726259122690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,7 +32,5 @@\n     loop{\n         \n     }\n \n-\n-\n }\n"
+                },
+                {
+                    "date": 1726259130565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,7 @@\n         vec![0, 2, 2, 2, 2],\n         vec![0, 2, 2, 2, 2],\n     ];\n \n-    loop{\n-        \n-    }\n \n+\n }\n"
+                },
+                {
+                    "date": 1726259140112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,8 @@\n         vec![0, 2, 1, 0, 2],\n         vec![0, 2, 2, 2, 2],\n         vec![0, 2, 2, 2, 2],\n     ];\n+    gen_in_line();\n \n \n-\n }\n"
+                },
+                {
+                    "date": 1726259147387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,8 @@\n         vec![0, 2, 1, 0, 2],\n         vec![0, 2, 2, 2, 2],\n         vec![0, 2, 2, 2, 2],\n     ];\n-    gen_in_line();\n+    gen_in_line(matrix);\n \n \n }\n"
+                },
+                {
+                    "date": 1726259331300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n use std::io;\n \n const SHIT: &str = \"[💩]\"; // ตัวแทนค่า 1\n const PLACE: &str = \"[  ]\"; // ตัวแทนค่า 0\n-const TREE: &str = \"[🌲]\";\n+const TREE: &str = \"[🌲]\"; // ตัวแทนค่า 2\n \n-fn gen_in_line(matrix: Vec<Vec<u8>>) {\n-    for row in &matrix {\n+fn gen_in_line(matrix: &Vec<Vec<u8>>) {\n+    for row in matrix {\n         for &val in row {\n             if val == 1 {\n                 print!(\"{}\", SHIT);\n             } else if val == 0 {\n@@ -18,17 +18,66 @@\n         println!();\n     }\n }\n \n+fn find_position(matrix: &Vec<Vec<u8>>) -> (usize, usize) {\n+    for (i, row) in matrix.iter().enumerate() {\n+        if let Some(j) = row.iter().position(|&x| x == 1) {\n+            return (i, j);\n+        }\n+    }\n+    panic!(\"Value 1 not found in matrix\");\n+}\n+\n+fn move_matrix(matrix: &mut Vec<Vec<u8>>, direction: &str) {\n+    let (row_pos, col_pos) = find_position(matrix);\n+\n+    match direction {\n+        \"up\" if row_pos > 0 => {\n+            matrix[row_pos][col_pos] = matrix[row_pos - 1][col_pos];\n+            matrix[row_pos - 1][col_pos] = 1;\n+        },\n+        \"down\" if row_pos < matrix.len() - 1 => {\n+            matrix[row_pos][col_pos] = matrix[row_pos + 1][col_pos];\n+            matrix[row_pos + 1][col_pos] = 1;\n+        },\n+        \"left\" if col_pos > 0 => {\n+            matrix[row_pos][col_pos] = matrix[row_pos][col_pos - 1];\n+            matrix[row_pos][col_pos - 1] = 1;\n+        },\n+        \"right\" if col_pos < matrix[0].len() - 1 => {\n+            matrix[row_pos][col_pos] = matrix[row_pos][col_pos + 1];\n+            matrix[row_pos][col_pos + 1] = 1;\n+        },\n+        _ => println!(\"Invalid move or move out of bounds\"),\n+    }\n+}\n+\n fn main() {\n     // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n-    let matrix: Vec<Vec<u8>> = vec![\n+    let mut matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 2, 2, 0],\n         vec![0, 0, 0, 0, 0],\n         vec![0, 2, 1, 0, 2],\n         vec![0, 2, 2, 2, 2],\n         vec![0, 2, 2, 2, 2],\n     ];\n-    gen_in_line(matrix);\n \n+    // แสดง matrix ก่อน\n+    gen_in_line(&matrix);\n \n+    loop {\n+        // รับคำสั่งจากผู้ใช้\n+        let mut input = String::new();\n+        println!(\"Enter direction (up, down, left, right) or 'exit' to quit:\");\n+        io::stdin().read_line(&mut input).expect(\"Failed to read line\");\n+        let direction = input.trim();\n+\n+        if direction == \"exit\" {\n+            break;\n+        }\n+\n+        // ขยับตามทิศทาง\n+        move_matrix(&mut matrix, direction);\n+        gen_in_line(&matrix);\n+    }\n }\n"
+                },
+                {
+                    "date": 1726259608551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+use rand::Rng;\n use std::io;\n \n const SHIT: &str = \"[💩]\"; // ตัวแทนค่า 1\n const PLACE: &str = \"[  ]\"; // ตัวแทนค่า 0\n@@ -29,45 +30,63 @@\n }\n \n fn move_matrix(matrix: &mut Vec<Vec<u8>>, direction: &str) {\n     let (row_pos, col_pos) = find_position(matrix);\n+    let rows = matrix.len();\n+    let cols = matrix[0].len();\n \n     match direction {\n         \"up\" if row_pos > 0 => {\n+            // Move the value up\n             matrix[row_pos][col_pos] = matrix[row_pos - 1][col_pos];\n             matrix[row_pos - 1][col_pos] = 1;\n         },\n-        \"down\" if row_pos < matrix.len() - 1 => {\n+        \"down\" if row_pos < rows - 1 => {\n+            // Move the value down\n             matrix[row_pos][col_pos] = matrix[row_pos + 1][col_pos];\n             matrix[row_pos + 1][col_pos] = 1;\n         },\n         \"left\" if col_pos > 0 => {\n+            // Move the value left\n             matrix[row_pos][col_pos] = matrix[row_pos][col_pos - 1];\n             matrix[row_pos][col_pos - 1] = 1;\n         },\n-        \"right\" if col_pos < matrix[0].len() - 1 => {\n+        \"right\" if col_pos < cols - 1 => {\n+            // Move the value right\n             matrix[row_pos][col_pos] = matrix[row_pos][col_pos + 1];\n             matrix[row_pos][col_pos + 1] = 1;\n         },\n         _ => println!(\"Invalid move or move out of bounds\"),\n     }\n+\n+    // Replace old positions of `2` if they are empty\n+    let mut rng = rand::thread_rng();\n+    for (i, row) in matrix.iter_mut().enumerate() {\n+        for (j, val) in row.iter_mut().enumerate() {\n+            if *val == 2 && (i != row_pos || j != col_pos) {\n+                *val = 0; // Clear old position of `2`\n+                let new_i = rng.gen_range(0..rows);\n+                let new_j = rng.gen_range(0..cols);\n+                if matrix[new_i][new_j] == 0 {\n+                    matrix[new_i][new_j] = 2; // Randomly place new `2`\n+                }\n+            }\n+        }\n+    }\n }\n \n fn main() {\n-    // สร้าง 2D vector ที่มีค่าเริ่มต้นเป็น 0\n     let mut matrix: Vec<Vec<u8>> = vec![\n         vec![0, 0, 2, 2, 0],\n         vec![0, 0, 0, 0, 0],\n         vec![0, 2, 1, 0, 2],\n         vec![0, 2, 2, 2, 2],\n         vec![0, 2, 2, 2, 2],\n     ];\n \n-    // แสดง matrix ก่อน\n     gen_in_line(&matrix);\n \n     loop {\n-        // รับคำสั่งจากผู้ใช้\n         let mut input = String::new();\n         println!(\"Enter direction (up, down, left, right) or 'exit' to quit:\");\n         io::stdin().read_line(&mut input).expect(\"Failed to read line\");\n         let direction = input.trim();\n@@ -75,9 +94,8 @@\n         if direction == \"exit\" {\n             break;\n         }\n \n-        // ขยับตามทิศทาง\n         move_matrix(&mut matrix, direction);\n         gen_in_line(&matrix);\n     }\n }\n"
+                },
+                {
+                    "date": 1726259686010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,9 +65,9 @@\n             if *val == 2 && (i != row_pos || j != col_pos) {\n                 *val = 0; // Clear old position of `2`\n                 let new_i = rng.gen_range(0..rows);\n                 let new_j = rng.gen_range(0..cols);\n-                if matrix[new_i][new_j] == 0 {\n+                if *matrix[new_i][new_j] == 0 {\n                     matrix[new_i][new_j] = 2; // Randomly place new `2`\n                 }\n             }\n         }\n"
+                },
+                {
+                    "date": 1726259712486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -65,10 +65,10 @@\n             if *val == 2 && (i != row_pos || j != col_pos) {\n                 *val = 0; // Clear old position of `2`\n                 let new_i = rng.gen_range(0..rows);\n                 let new_j = rng.gen_range(0..cols);\n-                if *matrix[new_i][new_j] == 0 {\n-                    matrix[new_i][new_j] = 2; // Randomly place new `2`\n+                if *matrix[new_i][new_j] == 1 {\n+                    *matrix[new_i][new_j] = 2; // Randomly place new `2`\n                 }\n             }\n         }\n     }\n"
+                },
+                {
+                    "date": 1726259750747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,12 +63,16 @@\n     for (i, row) in matrix.iter_mut().enumerate() {\n         for (j, val) in row.iter_mut().enumerate() {\n             if *val == 2 && (i != row_pos || j != col_pos) {\n                 *val = 0; // Clear old position of `2`\n-                let new_i = rng.gen_range(0..rows);\n-                let new_j = rng.gen_range(0..cols);\n-                if *matrix[new_i][new_j] == 1 {\n-                    *matrix[new_i][new_j] = 2; // Randomly place new `2`\n+                let mut placed = false;\n+                while !placed {\n+                    let new_i = rng.gen_range(0..rows);\n+                    let new_j = rng.gen_range(0..cols);\n+                    if matrix[new_i][new_j] == 0 {\n+                        matrix[new_i][new_j] = 2; // Randomly place new `2`\n+                        placed = true;\n+                    }\n                 }\n             }\n         }\n     }\n"
+                },
+                {
+                    "date": 1726259789986,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,11 +86,12 @@\n         vec![0, 2, 2, 2, 2],\n         vec![0, 2, 2, 2, 2],\n     ];\n \n-    gen_in_line(&matrix);\n+    loop {\n+        // พิมพ์ matrix ก่อน\n+        gen_in_line(&matrix);\n \n-    loop {\n         let mut input = String::new();\n         println!(\"Enter direction (up, down, left, right) or 'exit' to quit:\");\n         io::stdin().read_line(&mut input).expect(\"Failed to read line\");\n         let direction = input.trim();\n@@ -99,7 +100,6 @@\n             break;\n         }\n \n         move_matrix(&mut matrix, direction);\n-        gen_in_line(&matrix);\n     }\n }\n"
+                },
+                {
+                    "date": 1726259869826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n                 let mut placed = false;\n                 while !placed {\n                     let new_i = rng.gen_range(0..rows);\n                     let new_j = rng.gen_range(0..cols);\n-                    if matrix[new_i][new_j] == 0 {\n+                    if *matrix[new_i][new_j] == 0 {\n                         matrix[new_i][new_j] = 2; // Randomly place new `2`\n                         placed = true;\n                     }\n                 }\n"
+                },
+                {
+                    "date": 1726259875445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n                 while !placed {\n                     let new_i = rng.gen_range(0..rows);\n                     let new_j = rng.gen_range(0..cols);\n                     if *matrix[new_i][new_j] == 0 {\n-                        matrix[new_i][new_j] = 2; // Randomly place new `2`\n+                        *matrix[new_i][new_j] = 2; // Randomly place new `2`\n                         placed = true;\n                     }\n                 }\n             }\n"
+                },
+                {
+                    "date": 1726259967953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,10 +67,10 @@\n                 let mut placed = false;\n                 while !placed {\n                     let new_i = rng.gen_range(0..rows);\n                     let new_j = rng.gen_range(0..cols);\n-                    if *matrix[new_i][new_j] == 0 {\n-                        *matrix[new_i][new_j] = 2; // Randomly place new `2`\n+                    if matrix[new_i][new_j] == 0 {\n+                        matrix[new_i][new_j] = 2; // Randomly place new `2`\n                         placed = true;\n                     }\n                 }\n             }\n"
+                },
+                {
+                    "date": 1726259974150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n                 let mut placed = false;\n                 while !placed {\n                     let new_i = rng.gen_range(0..rows);\n                     let new_j = rng.gen_range(0..cols);\n-                    if matrix[new_i][new_j] == 0 {\n+                    if *matrix[new_i][new_j] == 0 {\n                         matrix[new_i][new_j] = 2; // Randomly place new `2`\n                         placed = true;\n                     }\n                 }\n"
+                },
+                {
+                    "date": 1726260061774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,10 +67,10 @@\n                 let mut placed = false;\n                 while !placed {\n                     let new_i = rng.gen_range(0..rows);\n                     let new_j = rng.gen_range(0..cols);\n-                    if *matrix[new_i][new_j] == 0 {\n-                        matrix[new_i][new_j] = 2; // Randomly place new `2`\n+                    if &matrix[new_i][new_j] == 0 {\n+                       *matrix[new_i][new_j] = 2; // Randomly place new `2`\n                         placed = true;\n                     }\n                 }\n             }\n"
+                },
+                {
+                    "date": 1726260069932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n                 let mut placed = false;\n                 while !placed {\n                     let new_i = rng.gen_range(0..rows);\n                     let new_j = rng.gen_range(0..cols);\n-                    if &matrix[new_i][new_j] == 0 {\n+                    if matrix[new_i][new_j] == 0 {\n                        *matrix[new_i][new_j] = 2; // Randomly place new `2`\n                         placed = true;\n                     }\n                 }\n"
+                },
+                {
+                    "date": 1726260076843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n                 while !placed {\n                     let new_i = rng.gen_range(0..rows);\n                     let new_j = rng.gen_range(0..cols);\n                     if matrix[new_i][new_j] == 0 {\n-                       *matrix[new_i][new_j] = 2; // Randomly place new `2`\n+                       &matrix[new_i][new_j] = 2; // Randomly place new `2`\n                         placed = true;\n                     }\n                 }\n             }\n"
+                },
+                {
+                    "date": 1726260105778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n                 while !placed {\n                     let new_i = rng.gen_range(0..rows);\n                     let new_j = rng.gen_range(0..cols);\n                     if matrix[new_i][new_j] == 0 {\n-                       &matrix[new_i][new_j] = 2; // Randomly place new `2`\n+                       *matrix[new_i][new_j] = 2; // Randomly place new `2`\n                         placed = true;\n                     }\n                 }\n             }\n"
+                },
+                {
+                    "date": 1726260227546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,105 +1,51 @@\n-use rand::Rng;\n-use std::io;\n-\n-const SHIT: &str = \"[💩]\"; // ตัวแทนค่า 1\n-const PLACE: &str = \"[  ]\"; // ตัวแทนค่า 0\n-const TREE: &str = \"[🌲]\"; // ตัวแทนค่า 2\n-\n-fn gen_in_line(matrix: &Vec<Vec<u8>>) {\n-    for row in matrix {\n-        for &val in row {\n-            if val == 1 {\n-                print!(\"{}\", SHIT);\n-            } else if val == 0 {\n-                print!(\"{}\", PLACE);\n-            } else if val == 2 {\n-                print!(\"{}\", TREE);\n-            }\n-        }\n-        println!();\n-    }\n-}\n-\n-fn find_position(matrix: &Vec<Vec<u8>>) -> (usize, usize) {\n-    for (i, row) in matrix.iter().enumerate() {\n-        if let Some(j) = row.iter().position(|&x| x == 1) {\n-            return (i, j);\n-        }\n-    }\n-    panic!(\"Value 1 not found in matrix\");\n-}\n-\n fn move_matrix(matrix: &mut Vec<Vec<u8>>, direction: &str) {\n     let (row_pos, col_pos) = find_position(matrix);\n     let rows = matrix.len();\n     let cols = matrix[0].len();\n-\n+    \n     match direction {\n         \"up\" if row_pos > 0 => {\n-            // Move the value up\n             matrix[row_pos][col_pos] = matrix[row_pos - 1][col_pos];\n             matrix[row_pos - 1][col_pos] = 1;\n         },\n         \"down\" if row_pos < rows - 1 => {\n-            // Move the value down\n             matrix[row_pos][col_pos] = matrix[row_pos + 1][col_pos];\n             matrix[row_pos + 1][col_pos] = 1;\n         },\n         \"left\" if col_pos > 0 => {\n-            // Move the value left\n             matrix[row_pos][col_pos] = matrix[row_pos][col_pos - 1];\n             matrix[row_pos][col_pos - 1] = 1;\n         },\n         \"right\" if col_pos < cols - 1 => {\n-            // Move the value right\n             matrix[row_pos][col_pos] = matrix[row_pos][col_pos + 1];\n             matrix[row_pos][col_pos + 1] = 1;\n         },\n-        _ => println!(\"Invalid move or move out of bounds\"),\n+        _ => {\n+            println!(\"Invalid move or move out of bounds\");\n+            return;\n+        }\n     }\n \n-    // Replace old positions of `2` if they are empty\n-    let mut rng = rand::thread_rng();\n-    for (i, row) in matrix.iter_mut().enumerate() {\n-        for (j, val) in row.iter_mut().enumerate() {\n-            if *val == 2 && (i != row_pos || j != col_pos) {\n-                *val = 0; // Clear old position of `2`\n-                let mut placed = false;\n-                while !placed {\n-                    let new_i = rng.gen_range(0..rows);\n-                    let new_j = rng.gen_range(0..cols);\n-                    if matrix[new_i][new_j] == 0 {\n-                       *matrix[new_i][new_j] = 2; // Randomly place new `2`\n-                        placed = true;\n-                    }\n-                }\n+    // Collect positions of trees and empty spaces\n+    let mut tree_positions = Vec::new();\n+    let mut empty_positions = Vec::new();\n+    for (i, row) in matrix.iter().enumerate() {\n+        for (j, &val) in row.iter().enumerate() {\n+            if val == 2 && (i != row_pos || j != col_pos) {\n+                tree_positions.push((i, j));\n+            } else if val == 0 {\n+                empty_positions.push((i, j));\n             }\n         }\n     }\n-}\n \n-fn main() {\n-    let mut matrix: Vec<Vec<u8>> = vec![\n-        vec![0, 0, 2, 2, 0],\n-        vec![0, 0, 0, 0, 0],\n-        vec![0, 2, 1, 0, 2],\n-        vec![0, 2, 2, 2, 2],\n-        vec![0, 2, 2, 2, 2],\n-    ];\n-\n-    loop {\n-        // พิมพ์ matrix ก่อน\n-        gen_in_line(&matrix);\n-\n-        let mut input = String::new();\n-        println!(\"Enter direction (up, down, left, right) or 'exit' to quit:\");\n-        io::stdin().read_line(&mut input).expect(\"Failed to read line\");\n-        let direction = input.trim();\n-\n-        if direction == \"exit\" {\n-            break;\n+    // Replace trees\n+    let mut rng = rand::thread_rng();\n+    for (i, j) in tree_positions {\n+        matrix[i][j] = 0; // Clear old position of tree\n+        if let Some(index) = rng.gen_range(0..empty_positions.len()) {\n+            let (new_i, new_j) = empty_positions.remove(index);\n+            matrix[new_i][new_j] = 2; // Place new tree\n         }\n-\n-        move_matrix(&mut matrix, direction);\n     }\n-}\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726260239020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,51 +1,105 @@\n+use rand::Rng;\n+use std::io;\n+\n+const SHIT: &str = \"[💩]\"; // ตัวแทนค่า 1\n+const PLACE: &str = \"[  ]\"; // ตัวแทนค่า 0\n+const TREE: &str = \"[🌲]\"; // ตัวแทนค่า 2\n+\n+fn gen_in_line(matrix: &Vec<Vec<u8>>) {\n+    for row in matrix {\n+        for &val in row {\n+            if val == 1 {\n+                print!(\"{}\", SHIT);\n+            } else if val == 0 {\n+                print!(\"{}\", PLACE);\n+            } else if val == 2 {\n+                print!(\"{}\", TREE);\n+            }\n+        }\n+        println!();\n+    }\n+}\n+\n+fn find_position(matrix: &Vec<Vec<u8>>) -> (usize, usize) {\n+    for (i, row) in matrix.iter().enumerate() {\n+        if let Some(j) = row.iter().position(|&x| x == 1) {\n+            return (i, j);\n+        }\n+    }\n+    panic!(\"Value 1 not found in matrix\");\n+}\n+\n fn move_matrix(matrix: &mut Vec<Vec<u8>>, direction: &str) {\n     let (row_pos, col_pos) = find_position(matrix);\n     let rows = matrix.len();\n     let cols = matrix[0].len();\n-    \n+\n     match direction {\n         \"up\" if row_pos > 0 => {\n+            // Move the value up\n             matrix[row_pos][col_pos] = matrix[row_pos - 1][col_pos];\n             matrix[row_pos - 1][col_pos] = 1;\n         },\n         \"down\" if row_pos < rows - 1 => {\n+            // Move the value down\n             matrix[row_pos][col_pos] = matrix[row_pos + 1][col_pos];\n             matrix[row_pos + 1][col_pos] = 1;\n         },\n         \"left\" if col_pos > 0 => {\n+            // Move the value left\n             matrix[row_pos][col_pos] = matrix[row_pos][col_pos - 1];\n\\ No newline at end of file\n             matrix[row_pos][col_pos - 1] = 1;\n         },\n         \"right\" if col_pos < cols - 1 => {\n+            // Move the value right\n             matrix[row_pos][col_pos] = matrix[row_pos][col_pos + 1];\n             matrix[row_pos][col_pos + 1] = 1;\n         },\n-        _ => {\n-            println!(\"Invalid move or move out of bounds\");\n-            return;\n-        }\n+        _ => println!(\"Invalid move or move out of bounds\"),\n     }\n \n-    // Collect positions of trees and empty spaces\n-    let mut tree_positions = Vec::new();\n-    let mut empty_positions = Vec::new();\n-    for (i, row) in matrix.iter().enumerate() {\n-        for (j, &val) in row.iter().enumerate() {\n-            if val == 2 && (i != row_pos || j != col_pos) {\n-                tree_positions.push((i, j));\n-            } else if val == 0 {\n-                empty_positions.push((i, j));\n+    // Replace old positions of `2` if they are empty\n+    let mut rng = rand::thread_rng();\n+    for (i, row) in matrix.iter_mut().enumerate() {\n+        for (j, val) in row.iter_mut().enumerate() {\n+            if *val == 2 && (i != row_pos || j != col_pos) {\n+                *val = 0; // Clear old position of `2`\n+                let mut placed = false;\n+                while !placed {\n+                    let new_i = rng.gen_range(0..rows);\n+                    let new_j = rng.gen_range(0..cols);\n+                    if matrix[new_i][new_j] == 0 {\n+                       matrix[new_i][new_j] = 2; // Randomly place new `2`\n+                        placed = true;\n+                    }\n+                }\n             }\n         }\n     }\n+}\n \n-    // Replace trees\n-    let mut rng = rand::thread_rng();\n-    for (i, j) in tree_positions {\n-        matrix[i][j] = 0; // Clear old position of tree\n-        if let Some(index) = rng.gen_range(0..empty_positions.len()) {\n-            let (new_i, new_j) = empty_positions.remove(index);\n-            matrix[new_i][new_j] = 2; // Place new tree\n+fn main() {\n+    let mut matrix: Vec<Vec<u8>> = vec![\n+        vec![0, 0, 2, 2, 0],\n+        vec![0, 0, 0, 0, 0],\n+        vec![0, 2, 1, 0, 2],\n+        vec![0, 2, 2, 2, 2],\n+        vec![0, 2, 2, 2, 2],\n+    ];\n+\n+    loop {\n+        // พิมพ์ matrix ก่อน\n+        gen_in_line(&matrix);\n+\n+        let mut input = String::new();\n+        println!(\"Enter direction (up, down, left, right) or 'exit' to quit:\");\n+        io::stdin().read_line(&mut input).expect(\"Failed to read line\");\n+        let direction = input.trim();\n+\n+        if direction == \"exit\" {\n+            break;\n         }\n+\n+        move_matrix(&mut matrix, direction);\n     }\n-}\n+}\n"
+                },
+                {
+                    "date": 1726260261124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,51 +32,54 @@\n fn move_matrix(matrix: &mut Vec<Vec<u8>>, direction: &str) {\n     let (row_pos, col_pos) = find_position(matrix);\n     let rows = matrix.len();\n     let cols = matrix[0].len();\n-\n+    \n     match direction {\n         \"up\" if row_pos > 0 => {\n-            // Move the value up\n             matrix[row_pos][col_pos] = matrix[row_pos - 1][col_pos];\n             matrix[row_pos - 1][col_pos] = 1;\n         },\n         \"down\" if row_pos < rows - 1 => {\n-            // Move the value down\n             matrix[row_pos][col_pos] = matrix[row_pos + 1][col_pos];\n             matrix[row_pos + 1][col_pos] = 1;\n         },\n         \"left\" if col_pos > 0 => {\n-            // Move the value left\n             matrix[row_pos][col_pos] = matrix[row_pos][col_pos - 1];\n             matrix[row_pos][col_pos - 1] = 1;\n         },\n         \"right\" if col_pos < cols - 1 => {\n-            // Move the value right\n             matrix[row_pos][col_pos] = matrix[row_pos][col_pos + 1];\n             matrix[row_pos][col_pos + 1] = 1;\n         },\n-        _ => println!(\"Invalid move or move out of bounds\"),\n+        _ => {\n+            println!(\"Invalid move or move out of bounds\");\n+            return;\n+        }\n     }\n \n-    // Replace old positions of `2` if they are empty\n-    let mut rng = rand::thread_rng();\n-    for (i, row) in matrix.iter_mut().enumerate() {\n-        for (j, val) in row.iter_mut().enumerate() {\n-            if *val == 2 && (i != row_pos || j != col_pos) {\n-                *val = 0; // Clear old position of `2`\n-                let mut placed = false;\n-                while !placed {\n-                    let new_i = rng.gen_range(0..rows);\n-                    let new_j = rng.gen_range(0..cols);\n-                    if matrix[new_i][new_j] == 0 {\n-                       matrix[new_i][new_j] = 2; // Randomly place new `2`\n-                        placed = true;\n-                    }\n-                }\n+    // Collect positions of trees and empty spaces\n+    let mut tree_positions = Vec::new();\n+    let mut empty_positions = Vec::new();\n+    for (i, row) in matrix.iter().enumerate() {\n+        for (j, &val) in row.iter().enumerate() {\n+            if val == 2 && (i != row_pos || j != col_pos) {\n+                tree_positions.push((i, j));\n+            } else if val == 0 {\n+                empty_positions.push((i, j));\n             }\n         }\n     }\n+\n+    // Replace trees\n+    let mut rng = rand::thread_rng();\n+    for (i, j) in tree_positions {\n+        matrix[i][j] = 0; // Clear old position of tree\n+        if let Some(index) = rng.gen_range(0..empty_positions.len()) {\n+            let (new_i, new_j) = empty_positions.remove(index);\n+            matrix[new_i][new_j] = 2; // Place new tree\n+        }\n+    }\n }\n \n fn main() {\n     let mut matrix: Vec<Vec<u8>> = vec![\n@@ -101,5 +104,5 @@\n         }\n \n         move_matrix(&mut matrix, direction);\n     }\n-}\n\\ No newline at end of file\n+}\n"
+                },
+                {
+                    "date": 1726260299461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,10 @@\n     // Replace trees\n     let mut rng = rand::thread_rng();\n     for (i, j) in tree_positions {\n         matrix[i][j] = 0; // Clear old position of tree\n-        if let Some(index) = rng.gen_range(0..empty_positions.len()) {\n+        if !empty_positions.is_empty() {\n+            let index = rng.gen_range(0..empty_positions.len());\n             let (new_i, new_j) = empty_positions.remove(index);\n             matrix[new_i][new_j] = 2; // Place new tree\n         }\n     }\n"
+                },
+                {
+                    "date": 1726260400758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,106 +4,81 @@\n const SHIT: &str = \"[💩]\"; // ตัวแทนค่า 1\n const PLACE: &str = \"[  ]\"; // ตัวแทนค่า 0\n const TREE: &str = \"[🌲]\"; // ตัวแทนค่า 2\n \n+const MATRIX_SIZE: usize = 5;\n+const PLAYER_POS: (usize, usize) = (MATRIX_SIZE / 2, MATRIX_SIZE / 2);\n+\n fn gen_in_line(matrix: &Vec<Vec<u8>>) {\n     for row in matrix {\n         for &val in row {\n-            if val == 1 {\n-                print!(\"{}\", SHIT);\n-            } else if val == 0 {\n-                print!(\"{}\", PLACE);\n-            } else if val == 2 {\n-                print!(\"{}\", TREE);\n+            match val {\n+                1 => print!(\"{}\", SHIT),\n+                0 => print!(\"{}\", PLACE),\n+                2 => print!(\"{}\", TREE),\n+                _ => print!(\"[??]\"),\n             }\n         }\n         println!();\n     }\n }\n \n-fn find_position(matrix: &Vec<Vec<u8>>) -> (usize, usize) {\n-    for (i, row) in matrix.iter().enumerate() {\n-        if let Some(j) = row.iter().position(|&x| x == 1) {\n-            return (i, j);\n-        }\n-    }\n-    panic!(\"Value 1 not found in matrix\");\n+fn generate_new_row() -> Vec<u8> {\n+    let mut rng = rand::thread_rng();\n+    (0..MATRIX_SIZE).map(|_| if rng.gen_bool(0.3) { 2 } else { 0 }).collect()\n }\n \n fn move_matrix(matrix: &mut Vec<Vec<u8>>, direction: &str) {\n-    let (row_pos, col_pos) = find_position(matrix);\n-    let rows = matrix.len();\n-    let cols = matrix[0].len();\n-    \n     match direction {\n-        \"up\" if row_pos > 0 => {\n-            matrix[row_pos][col_pos] = matrix[row_pos - 1][col_pos];\n-            matrix[row_pos - 1][col_pos] = 1;\n+        \"up\" => {\n+            matrix.remove(MATRIX_SIZE - 1);\n+            matrix.insert(0, generate_new_row());\n         },\n-        \"down\" if row_pos < rows - 1 => {\n-            matrix[row_pos][col_pos] = matrix[row_pos + 1][col_pos];\n-            matrix[row_pos + 1][col_pos] = 1;\n+        \"down\" => {\n+            matrix.remove(0);\n+            matrix.push(generate_new_row());\n         },\n-        \"left\" if col_pos > 0 => {\n-            matrix[row_pos][col_pos] = matrix[row_pos][col_pos - 1];\n-            matrix[row_pos][col_pos - 1] = 1;\n+        \"left\" => {\n+            for row in matrix.iter_mut() {\n+                row.remove(MATRIX_SIZE - 1);\n+                row.insert(0, if rand::random::<f32>() < 0.3 { 2 } else { 0 });\n+            }\n         },\n-        \"right\" if col_pos < cols - 1 => {\n-            matrix[row_pos][col_pos] = matrix[row_pos][col_pos + 1];\n-            matrix[row_pos][col_pos + 1] = 1;\n+        \"right\" => {\n+            for row in matrix.iter_mut() {\n+                row.remove(0);\n+                row.push(if rand::random::<f32>() < 0.3 { 2 } else { 0 });\n+            }\n         },\n-        _ => {\n-            println!(\"Invalid move or move out of bounds\");\n-            return;\n-        }\n+        _ => println!(\"Invalid direction\"),\n     }\n+    \n+    // Ensure the player is always at the center\n+    matrix[PLAYER_POS.0][PLAYER_POS.1] = 1;\n+}\n \n-    // Collect positions of trees and empty spaces\n-    let mut tree_positions = Vec::new();\n-    let mut empty_positions = Vec::new();\n-    for (i, row) in matrix.iter().enumerate() {\n-        for (j, &val) in row.iter().enumerate() {\n-            if val == 2 && (i != row_pos || j != col_pos) {\n-                tree_positions.push((i, j));\n-            } else if val == 0 {\n-                empty_positions.push((i, j));\n-            }\n-        }\n-    }\n+fn main() {\n+    let mut matrix: Vec<Vec<u8>> = vec![vec![0; MATRIX_SIZE]; MATRIX_SIZE];\n+    matrix[PLAYER_POS.0][PLAYER_POS.1] = 1;\n \n-    // Replace trees\n+    // Initialize with some random trees\n     let mut rng = rand::thread_rng();\n-    for (i, j) in tree_positions {\n-        matrix[i][j] = 0; // Clear old position of tree\n-        if !empty_positions.is_empty() {\n-            let index = rng.gen_range(0..empty_positions.len());\n-            let (new_i, new_j) = empty_positions.remove(index);\n-            matrix[new_i][new_j] = 2; // Place new tree\n+    for row in matrix.iter_mut() {\n+        for cell in row.iter_mut() {\n+            if *cell == 0 && rng.gen_bool(0.3) {\n+                *cell = 2;\n+            }\n         }\n     }\n-}\n \n-fn main() {\n-    let mut matrix: Vec<Vec<u8>> = vec![\n-        vec![0, 0, 2, 2, 0],\n-        vec![0, 0, 0, 0, 0],\n-        vec![0, 2, 1, 0, 2],\n-        vec![0, 2, 2, 2, 2],\n-        vec![0, 2, 2, 2, 2],\n-    ];\n-\n     loop {\n-        // พิมพ์ matrix ก่อน\n         gen_in_line(&matrix);\n-\n         let mut input = String::new();\n         println!(\"Enter direction (up, down, left, right) or 'exit' to quit:\");\n         io::stdin().read_line(&mut input).expect(\"Failed to read line\");\n         let direction = input.trim();\n-\n         if direction == \"exit\" {\n             break;\n         }\n-\n         move_matrix(&mut matrix, direction);\n     }\n-}\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1726260484167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,16 @@\n         },\n         _ => println!(\"Invalid direction\"),\n     }\n     \n-    // Ensure the player is always at the center\n+    // Ensure only one shit is at the center\n+    for row in matrix.iter_mut() {\n+        for cell in row.iter_mut() {\n+            if *cell == 1 {\n+                *cell = 0;\n+            }\n+        }\n+    }\n     matrix[PLAYER_POS.0][PLAYER_POS.1] = 1;\n }\n \n fn main() {\n@@ -61,12 +68,12 @@\n     matrix[PLAYER_POS.0][PLAYER_POS.1] = 1;\n \n     // Initialize with some random trees\n     let mut rng = rand::thread_rng();\n-    for row in matrix.iter_mut() {\n-        for cell in row.iter_mut() {\n-            if *cell == 0 && rng.gen_bool(0.3) {\n-                *cell = 2;\n+    for i in 0..MATRIX_SIZE {\n+        for j in 0..MATRIX_SIZE {\n+            if (i, j) != PLAYER_POS && rng.gen_bool(0.3) {\n+                matrix[i][j] = 2;\n             }\n         }\n     }\n \n"
+                },
+                {
+                    "date": 1726260555034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,31 +27,56 @@\n     (0..MATRIX_SIZE).map(|_| if rng.gen_bool(0.3) { 2 } else { 0 }).collect()\n }\n \n fn move_matrix(matrix: &mut Vec<Vec<u8>>, direction: &str) {\n+    let mut should_move = true;\n+\n     match direction {\n         \"up\" => {\n-            matrix.remove(MATRIX_SIZE - 1);\n-            matrix.insert(0, generate_new_row());\n+            should_move = matrix[0][PLAYER_POS.1] != 2;\n         },\n         \"down\" => {\n-            matrix.remove(0);\n-            matrix.push(generate_new_row());\n+            should_move = matrix[MATRIX_SIZE - 1][PLAYER_POS.1] != 2;\n         },\n         \"left\" => {\n-            for row in matrix.iter_mut() {\n-                row.remove(MATRIX_SIZE - 1);\n-                row.insert(0, if rand::random::<f32>() < 0.3 { 2 } else { 0 });\n-            }\n+            should_move = matrix[PLAYER_POS.0][0] != 2;\n         },\n         \"right\" => {\n-            for row in matrix.iter_mut() {\n-                row.remove(0);\n-                row.push(if rand::random::<f32>() < 0.3 { 2 } else { 0 });\n-            }\n+            should_move = matrix[PLAYER_POS.0][MATRIX_SIZE - 1] != 2;\n         },\n-        _ => println!(\"Invalid direction\"),\n+        _ => {\n+            println!(\"Invalid direction\");\n+            return;\n+        }\n     }\n+\n+    if should_move {\n+        match direction {\n+            \"up\" => {\n+                matrix.remove(MATRIX_SIZE - 1);\n+                matrix.insert(0, generate_new_row());\n+            },\n+            \"down\" => {\n+                matrix.remove(0);\n+                matrix.push(generate_new_row());\n+            },\n+            \"left\" => {\n+                for row in matrix.iter_mut() {\n+                    row.remove(MATRIX_SIZE - 1);\n+                    row.insert(0, if rand::random::<f32>() < 0.3 { 2 } else { 0 });\n+                }\n+            },\n+            \"right\" => {\n+                for row in matrix.iter_mut() {\n+                    row.remove(0);\n+                    row.push(if rand::random::<f32>() < 0.3 { 2 } else { 0 });\n+                }\n+            },\n+            _ => unreachable!(),\n+        }\n+    } else {\n+        println!(\"Can't move, there's a tree in the way!\");\n+    }\n     \n     // Ensure only one shit is at the center\n     for row in matrix.iter_mut() {\n         for cell in row.iter_mut() {\n"
+                },
+                {
+                    "date": 1726260654793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,22 +27,22 @@\n     (0..MATRIX_SIZE).map(|_| if rng.gen_bool(0.3) { 2 } else { 0 }).collect()\n }\n \n fn move_matrix(matrix: &mut Vec<Vec<u8>>, direction: &str) {\n-    let mut should_move = true;\n+    let mut should_move = false;\n \n     match direction {\n         \"up\" => {\n-            should_move = matrix[0][PLAYER_POS.1] != 2;\n+            should_move = matrix[0][PLAYER_POS.1] == 0;\n         },\n         \"down\" => {\n-            should_move = matrix[MATRIX_SIZE - 1][PLAYER_POS.1] != 2;\n+            should_move = matrix[MATRIX_SIZE - 1][PLAYER_POS.1] == 0;\n         },\n         \"left\" => {\n-            should_move = matrix[PLAYER_POS.0][0] != 2;\n+            should_move = matrix[PLAYER_POS.0][0] == 0;\n         },\n         \"right\" => {\n-            should_move = matrix[PLAYER_POS.0][MATRIX_SIZE - 1] != 2;\n+            should_move = matrix[PLAYER_POS.0][MATRIX_SIZE - 1] == 0;\n         },\n         _ => {\n             println!(\"Invalid direction\");\n             return;\n@@ -72,10 +72,11 @@\n                 }\n             },\n             _ => unreachable!(),\n         }\n+        println!(\"Moved {}\", direction);\n     } else {\n-        println!(\"Can't move, there's a tree in the way!\");\n+        println!(\"Can't move {}, there's an obstacle in the way!\", direction);\n     }\n     \n     // Ensure only one shit is at the center\n     for row in matrix.iter_mut() {\n"
+                },
+                {
+                    "date": 1726260772357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,22 +27,23 @@\n     (0..MATRIX_SIZE).map(|_| if rng.gen_bool(0.3) { 2 } else { 0 }).collect()\n }\n \n fn move_matrix(matrix: &mut Vec<Vec<u8>>, direction: &str) {\n-    let mut should_move = false;\n+    let mut should_move = true;\n \n+    // Check if there's a tree next to the player in the movement direction\n     match direction {\n         \"up\" => {\n-            should_move = matrix[0][PLAYER_POS.1] == 0;\n+            should_move = matrix[0][PLAYER_POS.1] != 2;\n         },\n         \"down\" => {\n-            should_move = matrix[MATRIX_SIZE - 1][PLAYER_POS.1] == 0;\n+            should_move = matrix[MATRIX_SIZE - 1][PLAYER_POS.1] != 2;\n         },\n         \"left\" => {\n-            should_move = matrix[PLAYER_POS.0][0] == 0;\n+            should_move = matrix[PLAYER_POS.0][0] != 2;\n         },\n         \"right\" => {\n-            should_move = matrix[PLAYER_POS.0][MATRIX_SIZE - 1] == 0;\n+            should_move = matrix[PLAYER_POS.0][MATRIX_SIZE - 1] != 2;\n         },\n         _ => {\n             println!(\"Invalid direction\");\n             return;\n@@ -74,9 +75,9 @@\n             _ => unreachable!(),\n         }\n         println!(\"Moved {}\", direction);\n     } else {\n-        println!(\"Can't move {}, there's an obstacle in the way!\", direction);\n+        println!(\"Can't move {}, there's a tree in the way!\", direction);\n     }\n     \n     // Ensure only one shit is at the center\n     for row in matrix.iter_mut() {\n"
+                },
+                {
+                    "date": 1726260952249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,8 @@\n     (0..MATRIX_SIZE).map(|_| if rng.gen_bool(0.3) { 2 } else { 0 }).collect()\n }\n \n fn move_matrix(matrix: &mut Vec<Vec<u8>>, direction: &str) {\n-    let mut should_move = true;\n \n     // Check if there's a tree next to the player in the movement direction\n     match direction {\n         \"up\" => {\n"
+                },
+                {
+                    "date": 1726261293895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,13 +27,14 @@\n     (0..MATRIX_SIZE).map(|_| if rng.gen_bool(0.3) { 2 } else { 0 }).collect()\n }\n \n fn move_matrix(matrix: &mut Vec<Vec<u8>>, direction: &str) {\n+    let mut should_move = true;\n \n     // Check if there's a tree next to the player in the movement direction\n     match direction {\n         \"up\" => {\n-            should_move = matrix[0][PLAYER_POS.1] != 2;\n+            should_move = matrix[1][PLAYER_POS.1] != 2;\n         },\n         \"down\" => {\n             should_move = matrix[MATRIX_SIZE - 1][PLAYER_POS.1] != 2;\n         },\n"
+                },
+                {
+                    "date": 1726261308252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n         \"up\" => {\n             should_move = matrix[1][PLAYER_POS.1] != 2;\n         },\n         \"down\" => {\n-            should_move = matrix[MATRIX_SIZE - 1][PLAYER_POS.1] != 2;\n+            should_move = matrix[MATRIX_SIZE][PLAYER_POS.1] != 2;\n         },\n         \"left\" => {\n             should_move = matrix[PLAYER_POS.0][0] != 2;\n         },\n"
+                },
+                {
+                    "date": 1726261354841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n         \"up\" => {\n             should_move = matrix[1][PLAYER_POS.1] != 2;\n         },\n         \"down\" => {\n-            should_move = matrix[MATRIX_SIZE][PLAYER_POS.1] != 2;\n+            should_move = matrix[MATRIX_SIZE + 1][PLAYER_POS.1] != 2;\n         },\n         \"left\" => {\n             should_move = matrix[PLAYER_POS.0][0] != 2;\n         },\n"
+                },
+                {
+                    "date": 1726261384411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n         \"up\" => {\n             should_move = matrix[1][PLAYER_POS.1] != 2;\n         },\n         \"down\" => {\n-            should_move = matrix[MATRIX_SIZE + 1][PLAYER_POS.1] != 2;\n+            should_move = matrix[MATRIX_SIZE -2][PLAYER_POS.1] != 2;\n         },\n         \"left\" => {\n             should_move = matrix[PLAYER_POS.0][0] != 2;\n         },\n"
+                },
+                {
+                    "date": 1726261442293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n         \"down\" => {\n             should_move = matrix[MATRIX_SIZE -2][PLAYER_POS.1] != 2;\n         },\n         \"left\" => {\n-            should_move = matrix[PLAYER_POS.0][0] != 2;\n+            should_move = matrix[PLAYER_POS.0][1] != 2;\n         },\n         \"right\" => {\n             should_move = matrix[PLAYER_POS.0][MATRIX_SIZE - 1] != 2;\n         },\n"
+                },
+                {
+                    "date": 1726261471734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n         \"left\" => {\n             should_move = matrix[PLAYER_POS.0][1] != 2;\n         },\n         \"right\" => {\n-            should_move = matrix[PLAYER_POS.0][MATRIX_SIZE - 1] != 2;\n+            should_move = matrix[PLAYER_POS.0][MATRIX_SIZE - 2] != 2;\n         },\n         _ => {\n             println!(\"Invalid direction\");\n             return;\n"
+                },
+                {
+                    "date": 1726282537444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     (0..MATRIX_SIZE).map(|_| if rng.gen_bool(0.3) { 2 } else { 0 }).collect()\n }\n \n fn move_matrix(matrix: &mut Vec<Vec<u8>>, direction: &str) {\n-    let mut should_move = true;\n+    let mut should_move: bool = true;\n \n     // Check if there's a tree next to the player in the movement direction\n     match direction {\n         \"up\" => {\n"
+                },
+                {
+                    "date": 1726282564803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,9 @@\n fn move_matrix(matrix: &mut Vec<Vec<u8>>, direction: &str) {\n     let mut should_move: bool = true;\n \n     // Check if there's a tree next to the player in the movement direction\n+    move\n     match direction {\n         \"up\" => {\n             should_move = matrix[1][PLAYER_POS.1] != 2;\n         },\n"
+                },
+                {
+                    "date": 1726282571828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,11 @@\n fn move_matrix(matrix: &mut Vec<Vec<u8>>, direction: &str) {\n     let mut should_move: bool = true;\n \n     // Check if there's a tree next to the player in the movement direction\n-    move\n+    move {\n+        \n+    }\n     match direction {\n         \"up\" => {\n             should_move = matrix[1][PLAYER_POS.1] != 2;\n         },\n"
+                },
+                {
+                    "date": 1726282579813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,26 @@\n     let mut should_move: bool = true;\n \n     // Check if there's a tree next to the player in the movement direction\n     move {\n-        \n+        match direction {\n+            \"up\" => {\n+                should_move = matrix[1][PLAYER_POS.1] != 2;\n+            },\n+            \"down\" => {\n+                should_move = matrix[MATRIX_SIZE -2][PLAYER_POS.1] != 2;\n+            },\n+            \"left\" => {\n+                should_move = matrix[PLAYER_POS.0][1] != 2;\n+            },\n+            \"right\" => {\n+                should_move = matrix[PLAYER_POS.0][MATRIX_SIZE - 2] != 2;\n+            },\n+            _ => {\n+                println!(\"Invalid direction\");\n+                return;\n+            }\n+        }\n     }\n     match direction {\n         \"up\" => {\n             should_move = matrix[1][PLAYER_POS.1] != 2;\n"
+                },
+                {
+                    "date": 1726282588676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,25 +50,9 @@\n                 return;\n             }\n         }\n     }\n-    match direction {\n-        \"up\" => {\n-            should_move = matrix[1][PLAYER_POS.1] != 2;\n-        },\n-        \"down\" => {\n-            should_move = matrix[MATRIX_SIZE -2][PLAYER_POS.1] != 2;\n-        },\n-        \"left\" => {\n-            should_move = matrix[PLAYER_POS.0][1] != 2;\n-        },\n-        \"right\" => {\n-            should_move = matrix[PLAYER_POS.0][MATRIX_SIZE - 2] != 2;\n-        },\n-        _ => {\n-            println!(\"Invalid direction\");\n-            return;\n-        }\n+    \n     }\n \n     if should_move {\n         match direction {\n"
+                },
+                {
+                    "date": 1726282638357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,35 +26,52 @@\n     let mut rng = rand::thread_rng();\n     (0..MATRIX_SIZE).map(|_| if rng.gen_bool(0.3) { 2 } else { 0 }).collect()\n }\n \n-fn move_matrix(matrix: &mut Vec<Vec<u8>>, direction: &str) {\n+fn move_matrix(matrix: &mut Vec<Vec<u8>>, player_pos: &mut (usize, usize), direction: &str) {\n+    let (row, col) = *player_pos; // Destructure player position\n+\n     let mut should_move: bool = true;\n-\n-    // Check if there's a tree next to the player in the movement direction\n-    move {\n-        match direction {\n-            \"up\" => {\n-                should_move = matrix[1][PLAYER_POS.1] != 2;\n-            },\n-            \"down\" => {\n-                should_move = matrix[MATRIX_SIZE -2][PLAYER_POS.1] != 2;\n-            },\n-            \"left\" => {\n-                should_move = matrix[PLAYER_POS.0][1] != 2;\n-            },\n-            \"right\" => {\n-                should_move = matrix[PLAYER_POS.0][MATRIX_SIZE - 2] != 2;\n-            },\n-            _ => {\n-                println!(\"Invalid direction\");\n-                return;\n+    \n+    match direction {\n+        \"up\" if row > 0 => {\n+            should_move = matrix[row - 1][col] != 2; // Check above the player\n+            if should_move {\n+                *player_pos = (row - 1, col); // Move the player up\n             }\n+        },\n+        \"down\" if row < matrix.len() - 1 => {\n+            should_move = matrix[row + 1][col] != 2; // Check below the player\n+            if should_move {\n+                *player_pos = (row + 1, col); // Move the player down\n+            }\n+        },\n+        \"left\" if col > 0 => {\n+            should_move = matrix[row][col - 1] != 2; // Check to the left\n+            if should_move {\n+                *player_pos = (row, col - 1); // Move the player left\n+            }\n+        },\n+        \"right\" if col < matrix[0].len() - 1 => {\n+            should_move = matrix[row][col + 1] != 2; // Check to the right\n+            if should_move {\n+                *player_pos = (row, col + 1); // Move the player right\n+            }\n+        },\n+        _ => {\n+            println!(\"Invalid move or out of bounds\");\n+            return;\n         }\n     }\n-    \n+\n+    if should_move {\n+        println!(\"Player moved to {:?}\", player_pos);\n+    } else {\n+        println!(\"Move blocked by tree\");\n     }\n+}\n \n+\n     if should_move {\n         match direction {\n             \"up\" => {\n                 matrix.remove(MATRIX_SIZE - 1);\n"
+                },
+                {
+                    "date": 1726282649714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,53 +26,52 @@\n     let mut rng = rand::thread_rng();\n     (0..MATRIX_SIZE).map(|_| if rng.gen_bool(0.3) { 2 } else { 0 }).collect()\n }\n \n-fn move_matrix(matrix: &mut Vec<Vec<u8>>, player_pos: &mut (usize, usize), direction: &str) {\n-    let (row, col) = *player_pos; // Destructure player position\n+fn move_matrix(matrix: &mut Vec<Vec<u8>>, direction: &str) {\n+    let mut should_move: bool = true;\n \n-    let mut should_move: bool = true;\n-    \n+    // Check if there's a tree next to the player in the movement direction\n+    move {\n+        match direction {\n+            \"up\" => {\n+                should_move = matrix[1][PLAYER_POS.1] != 2;\n+            },\n+            \"down\" => {\n+                should_move = matrix[MATRIX_SIZE -2][PLAYER_POS.1] != 2;\n+            },\n+            \"left\" => {\n+                should_move = matrix[PLAYER_POS.0][1] != 2;\n+            },\n+            \"right\" => {\n+                should_move = matrix[PLAYER_POS.0][MATRIX_SIZE - 2] != 2;\n+            },\n+            _ => {\n+                println!(\"Invalid direction\");\n+                return;\n+            }\n+        }\n+    }\n     match direction {\n-        \"up\" if row > 0 => {\n-            should_move = matrix[row - 1][col] != 2; // Check above the player\n-            if should_move {\n-                *player_pos = (row - 1, col); // Move the player up\n-            }\n+        \"up\" => {\n+            should_move = matrix[1][PLAYER_POS.1] != 2;\n         },\n-        \"down\" if row < matrix.len() - 1 => {\n-            should_move = matrix[row + 1][col] != 2; // Check below the player\n-            if should_move {\n-                *player_pos = (row + 1, col); // Move the player down\n-            }\n+        \"down\" => {\n+            should_move = matrix[MATRIX_SIZE -2][PLAYER_POS.1] != 2;\n         },\n-        \"left\" if col > 0 => {\n-            should_move = matrix[row][col - 1] != 2; // Check to the left\n-            if should_move {\n-                *player_pos = (row, col - 1); // Move the player left\n-            }\n+        \"left\" => {\n+            should_move = matrix[PLAYER_POS.0][1] != 2;\n         },\n-        \"right\" if col < matrix[0].len() - 1 => {\n-            should_move = matrix[row][col + 1] != 2; // Check to the right\n-            if should_move {\n-                *player_pos = (row, col + 1); // Move the player right\n-            }\n+        \"right\" => {\n+            should_move = matrix[PLAYER_POS.0][MATRIX_SIZE - 2] != 2;\n         },\n         _ => {\n-            println!(\"Invalid move or out of bounds\");\n+            println!(\"Invalid direction\");\n             return;\n         }\n     }\n \n     if should_move {\n-        println!(\"Player moved to {:?}\", player_pos);\n-    } else {\n-        println!(\"Move blocked by tree\");\n-    }\n-}\n-\n-\n-    if should_move {\n         match direction {\n             \"up\" => {\n                 matrix.remove(MATRIX_SIZE - 1);\n                 matrix.insert(0, generate_new_row());\n"
+                },
+                {
+                    "date": 1726282660880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,28 +30,8 @@\n fn move_matrix(matrix: &mut Vec<Vec<u8>>, direction: &str) {\n     let mut should_move: bool = true;\n \n     // Check if there's a tree next to the player in the movement direction\n-    move {\n-        match direction {\n-            \"up\" => {\n-                should_move = matrix[1][PLAYER_POS.1] != 2;\n-            },\n-            \"down\" => {\n-                should_move = matrix[MATRIX_SIZE -2][PLAYER_POS.1] != 2;\n-            },\n-            \"left\" => {\n-                should_move = matrix[PLAYER_POS.0][1] != 2;\n-            },\n-            \"right\" => {\n-                should_move = matrix[PLAYER_POS.0][MATRIX_SIZE - 2] != 2;\n-            },\n-            _ => {\n-                println!(\"Invalid direction\");\n-                return;\n-            }\n-        }\n-    }\n     match direction {\n         \"up\" => {\n             should_move = matrix[1][PLAYER_POS.1] != 2;\n         },\n"
+                },
+                {
+                    "date": 1726282888997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,71 +26,69 @@\n     let mut rng = rand::thread_rng();\n     (0..MATRIX_SIZE).map(|_| if rng.gen_bool(0.3) { 2 } else { 0 }).collect()\n }\n \n-fn move_matrix(matrix: &mut Vec<Vec<u8>>, direction: &str) {\n-    let mut should_move: bool = true;\n-\n-    // Check if there's a tree next to the player in the movement direction\n-    match direction {\n-        \"up\" => {\n-            should_move = matrix[1][PLAYER_POS.1] != 2;\n-        },\n-        \"down\" => {\n-            should_move = matrix[MATRIX_SIZE -2][PLAYER_POS.1] != 2;\n-        },\n-        \"left\" => {\n-            should_move = matrix[PLAYER_POS.0][1] != 2;\n-        },\n-        \"right\" => {\n-            should_move = matrix[PLAYER_POS.0][MATRIX_SIZE - 2] != 2;\n-        },\n+fn move_matrix(matrix: &mut Vec<Vec<u8>>, player_pos: &mut (usize, usize), direction: &str) {\n+    const MATRIX_SIZE: usize = 5; // Ensure this constant matches your matrix dimensions\n+    let (row, col) = *player_pos;\n+    \n+    let should_move = match direction {\n+        \"up\" if row > 0 => matrix[row - 1][col] != 2,\n+        \"down\" if row < MATRIX_SIZE - 1 => matrix[row + 1][col] != 2,\n+        \"left\" if col > 0 => matrix[row][col - 1] != 2,\n+        \"right\" if col < MATRIX_SIZE - 1 => matrix[row][col + 1] != 2,\n         _ => {\n             println!(\"Invalid direction\");\n             return;\n         }\n-    }\n+    };\n \n     if should_move {\n+        // Update the matrix by shifting rows/columns\n         match direction {\n             \"up\" => {\n+                *player_pos = (row - 1, col); // Update player position\n                 matrix.remove(MATRIX_SIZE - 1);\n                 matrix.insert(0, generate_new_row());\n             },\n             \"down\" => {\n+                *player_pos = (row + 1, col);\n                 matrix.remove(0);\n                 matrix.push(generate_new_row());\n             },\n             \"left\" => {\n-                for row in matrix.iter_mut() {\n-                    row.remove(MATRIX_SIZE - 1);\n-                    row.insert(0, if rand::random::<f32>() < 0.3 { 2 } else { 0 });\n+                *player_pos = (row, col - 1);\n+                for r in matrix.iter_mut() {\n+                    r.remove(MATRIX_SIZE - 1);\n+                    r.insert(0, if rand::random::<f32>() < 0.3 { 2 } else { 0 });\n                 }\n             },\n             \"right\" => {\n-                for row in matrix.iter_mut() {\n-                    row.remove(0);\n-                    row.push(if rand::random::<f32>() < 0.3 { 2 } else { 0 });\n+                *player_pos = (row, col + 1);\n+                for r in matrix.iter_mut() {\n+                    r.remove(0);\n+                    r.push(if rand::random::<f32>() < 0.3 { 2 } else { 0 });\n                 }\n             },\n             _ => unreachable!(),\n         }\n         println!(\"Moved {}\", direction);\n     } else {\n         println!(\"Can't move {}, there's a tree in the way!\", direction);\n     }\n-    \n-    // Ensure only one shit is at the center\n+\n+    // Ensure only one \"💩\" is in the center\n     for row in matrix.iter_mut() {\n         for cell in row.iter_mut() {\n             if *cell == 1 {\n-                *cell = 0;\n+                *cell = 0; // Clear any extra '1'\n             }\n         }\n     }\n-    matrix[PLAYER_POS.0][PLAYER_POS.1] = 1;\n+    matrix[player_pos.0][player_pos.1] = 1; // Place player at new position\n }\n \n+\n fn main() {\n     let mut matrix: Vec<Vec<u8>> = vec![vec![0; MATRIX_SIZE]; MATRIX_SIZE];\n     matrix[PLAYER_POS.0][PLAYER_POS.1] = 1;\n \n"
+                },
+                {
+                    "date": 1726282959396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n     let mut rng = rand::thread_rng();\n     (0..MATRIX_SIZE).map(|_| if rng.gen_bool(0.3) { 2 } else { 0 }).collect()\n }\n \n-fn move_matrix(matrix: &mut Vec<Vec<u8>>, player_pos: &mut (usize, usize), direction: &str) {\n+fn move_matrix(matrix: &mut Vec<Vec<u8>>,  direction: &str) {\n     const MATRIX_SIZE: usize = 5; // Ensure this constant matches your matrix dimensions\n     let (row, col) = *player_pos;\n     \n     let should_move = match direction {\n"
+                },
+                {
+                    "date": 1726282966283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n }\n \n fn move_matrix(matrix: &mut Vec<Vec<u8>>,  direction: &str) {\n     const MATRIX_SIZE: usize = 5; // Ensure this constant matches your matrix dimensions\n-    let (row, col) = *player_pos;\n+    let (row, col) = *PLAYER_POS;\n     \n     let should_move = match direction {\n         \"up\" if row > 0 => matrix[row - 1][col] != 2,\n         \"down\" if row < MATRIX_SIZE - 1 => matrix[row + 1][col] != 2,\n"
+                },
+                {
+                    "date": 1726282973439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const PLACE: &str = \"[  ]\"; // ตัวแทนค่า 0\n const TREE: &str = \"[🌲]\"; // ตัวแทนค่า 2\n \n const MATRIX_SIZE: usize = 5;\n-const PLAYER_POS: (usize, usize) = (MATRIX_SIZE / 2, MATRIX_SIZE / 2);\n+const mut PLAYER_POS: (usize, usize) = (MATRIX_SIZE / 2, MATRIX_SIZE / 2);\n \n fn gen_in_line(matrix: &Vec<Vec<u8>>) {\n     for row in matrix {\n         for &val in row {\n"
+                },
+                {
+                    "date": 1726282983969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const PLACE: &str = \"[  ]\"; // ตัวแทนค่า 0\n const TREE: &str = \"[🌲]\"; // ตัวแทนค่า 2\n \n const MATRIX_SIZE: usize = 5;\n-const mut PLAYER_POS: (usize, usize) = (MATRIX_SIZE / 2, MATRIX_SIZE / 2);\n+const PLAYER_POS: (usize, usize) = (MATRIX_SIZE / 2, MATRIX_SIZE / 2);\n \n fn gen_in_line(matrix: &Vec<Vec<u8>>) {\n     for row in matrix {\n         for &val in row {\n"
+                },
+                {
+                    "date": 1726282998753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n }\n \n fn move_matrix(matrix: &mut Vec<Vec<u8>>,  direction: &str) {\n     const MATRIX_SIZE: usize = 5; // Ensure this constant matches your matrix dimensions\n-    let (row, col) = *PLAYER_POS;\n+    let (row, col) = PLAYER_POS;\n     \n     let should_move = match direction {\n         \"up\" if row > 0 => matrix[row - 1][col] != 2,\n         \"down\" if row < MATRIX_SIZE - 1 => matrix[row + 1][col] != 2,\n"
+                },
+                {
+                    "date": 1726283040321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,8 @@\n     if should_move {\n         // Update the matrix by shifting rows/columns\n         match direction {\n             \"up\" => {\n-                *player_pos = (row - 1, col); // Update player position\n                 matrix.remove(MATRIX_SIZE - 1);\n                 matrix.insert(0, generate_new_row());\n             },\n             \"down\" => {\n"
+                },
+                {
+                    "date": 1726283045766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,21 +49,19 @@\n                 matrix.remove(MATRIX_SIZE - 1);\n                 matrix.insert(0, generate_new_row());\n             },\n             \"down\" => {\n-                *player_pos = (row + 1, col);\n                 matrix.remove(0);\n                 matrix.push(generate_new_row());\n             },\n             \"left\" => {\n-                *player_pos = (row, col - 1);\n                 for r in matrix.iter_mut() {\n                     r.remove(MATRIX_SIZE - 1);\n                     r.insert(0, if rand::random::<f32>() < 0.3 { 2 } else { 0 });\n                 }\n             },\n             \"right\" => {\n-                *player_pos = (row, col + 1);\n+                * = (row, col + 1);\n                 for r in matrix.iter_mut() {\n                     r.remove(0);\n                     r.push(if rand::random::<f32>() < 0.3 { 2 } else { 0 });\n                 }\n"
+                },
+                {
+                    "date": 1726283065537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,8 @@\n                     r.insert(0, if rand::random::<f32>() < 0.3 { 2 } else { 0 });\n                 }\n             },\n             \"right\" => {\n-                * = (row, col + 1);\n                 for r in matrix.iter_mut() {\n                     r.remove(0);\n                     r.push(if rand::random::<f32>() < 0.3 { 2 } else { 0 });\n                 }\n@@ -80,9 +79,8 @@\n                 *cell = 0; // Clear any extra '1'\n             }\n         }\n     }\n-    matrix[player_pos.0][player_pos.1] = 1; // Place player at new position\n }\n \n \n fn main() {\n"
+                },
+                {
+                    "date": 1726283079382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,8 +79,9 @@\n                 *cell = 0; // Clear any extra '1'\n             }\n         }\n     }\n+    matrix[PLAYER_POS.0][PLAYER_POS.1] = 1; // Place player at new position\n }\n \n \n fn main() {\n"
+                }
+            ],
+            "date": 1726244600936,
+            "name": "Commit-0",
+            "content": "fn main() {\n\n    \n    println!(\"Hello, world!\");\n}\n"
+        }
+    ]
+}
